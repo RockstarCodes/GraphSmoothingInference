@@ -2,20 +2,20 @@
 
 **Team:** AARON (Reg. No. 261090830003) and AASHISH (Reg. No. 261090830016).
 
-The split below is a *proposed* allocation that balances the rubric. "Student 1" and "Student 2" are not yet mapped to AARON or AASHISH: replace them with the actual names once the team confirms who did what. Commit links and individual statements must be written by the students themselves. Commit count is not a proxy for contribution.
+Lead and reviewer roles below were confirmed by the team (Student 1 = AARON, Student 2 = AASHISH). Commit links and individual statements must be written by the students themselves.
 
 | Work item | Lead student | Supporting / reviewer student | Artifact / commit | Verification (what the reviewer checked) |
 |---|---|---|---|---|
-| Literature review, comparison table, gap analysis | Student 1 | Student 2 | `docs/related_work.md` | Reviewer re-opened every cited landing page and confirmed title/authors/venue/DOI |
-| Dataset acquisition, schema audit, target reproduction | Student 2 | Student 1 | `src/data/`, `scripts/acquire_data.py`, `scripts/audit_dataset.py`, `docs/data_card.md` | Re-derived the label crosswalk from FairGNN `train_fairGNN.py`; reran checksums |
-| Node2Vec / FairWalk embeddings and diagnostics | Student 1 | Student 2 | `src/embeddings/random_walks.py`, `tests/test_embeddings.py` | Checked FairWalk group-uniform step on the star fixture; reproducibility test |
-| Conditional Markov network, factors, forest projection | Student 2 | Student 1 | `src/graphical_model/{factors,pairwise_model,forest}.py` | Hand-checked potential indexing and evidence factors |
-| Exact inference and validation (sum-product, VE, clique tree, enumeration) | Student 2 | Student 1 | `src/graphical_model/`, `scripts/verify_inference.py`, `tests/test_inference_agreement.py` | Independently traced one message-passing example on paper |
-| Fairness and probabilistic metrics | Student 1 | Student 2 | `src/fairness/metrics.py`, `tests/test_fairness_metrics.py` | Hand-computed the toy example in the test |
-| Attenuation method (HCA), λ fitting, selection rules | Student 1 | Student 2 | `src/graphical_model/attenuation.py`, `docs/mathematical_formulation.md` | Checked no validation/test label enters λ (`tests/test_leakage.py`) |
-| Statistical analysis (block bootstrap, Holm) | Student 2 | Student 1 | `src/statistics/bootstrap.py`, `scripts/evaluate.py` | Reproduced Holm adjustment by hand for H1–H4 |
-| Synthetic generator and Experiment 4 | Student 1 | Student 2 | `src/synthetic/`, `scripts/run_synthetic.py` | Confirmed realised homophily matches targets |
-| Robustness and Experiment 5 | Student 2 | Student 1 | `src/experiments/perturb.py`, `scripts/run_robustness.py` | Checked degree sequence preserved under rewiring |
+| Literature review, comparison table, gap analysis | AARON | AASHISH | `docs/related_work.md` | Reviewer re-opened every cited landing page and confirmed title/authors/venue/DOI |
+| Dataset acquisition, schema audit, target reproduction | AASHISH | AARON | `src/data/`, `scripts/acquire_data.py`, `scripts/audit_dataset.py`, `docs/data_card.md` | Re-derived the label crosswalk from FairGNN `train_fairGNN.py`; reran checksums |
+| Node2Vec / FairWalk embeddings and diagnostics | AARON | AASHISH | `src/embeddings/random_walks.py`, `tests/test_embeddings.py` | Checked FairWalk group-uniform step on the star fixture; reproducibility test |
+| Conditional Markov network, factors, forest projection | AASHISH | AARON | `src/graphical_model/{factors,pairwise_model,forest}.py` | Hand-checked potential indexing and evidence factors |
+| Exact inference and validation (sum-product, VE, clique tree, enumeration) | AASHISH | AARON | `src/graphical_model/`, `scripts/verify_inference.py`, `tests/test_inference_agreement.py` | Independently traced one message-passing example on paper |
+| Fairness and probabilistic metrics | AARON | AASHISH | `src/fairness/metrics.py`, `tests/test_fairness_metrics.py` | Hand-computed the toy example in the test |
+| Attenuation method (HCA), λ fitting, selection rules | AARON | AASHISH | `src/graphical_model/attenuation.py`, `docs/mathematical_formulation.md` | Checked no validation/test label enters λ (`tests/test_leakage.py`) |
+| Statistical analysis (block bootstrap, Holm) | AASHISH | AARON | `src/statistics/bootstrap.py`, `scripts/evaluate.py` | Reproduced Holm adjustment by hand for H1–H4 |
+| Synthetic generator and Experiment 4 | AARON | AASHISH | `src/synthetic/`, `scripts/run_synthetic.py` | Confirmed realised homophily matches targets |
+| Robustness and Experiment 5 | AASHISH | AARON | `src/experiments/perturb.py`, `scripts/run_robustness.py` | Checked degree sequence preserved under rewiring |
 | Report, manuscript, slides, demo | Both | Both | `report/`, `manuscript/`, `slides/`, `demo/` | Each student presents the other's half in rehearsal |
 
 ## Individual statements (to be written by each student)

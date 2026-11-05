@@ -141,7 +141,7 @@ Statuses are only: **Complete**, **Partial**, **Failed**, **Missing**, **N/A** (
 
 | ID | Requirement | Location | Status |
 |---|---|---|---|
-| DOC1 | README with 18 items | `README.md` | Partial — team ID, repository URL and the per-student contribution split are still placeholders |
+| DOC1 | README with 18 items | `README.md` | Complete — names, repository and contribution split filled; no team ID exists |
 | DOC2 | Proposal | `docs/proposal.md` | Complete |
 | DOC3 | Related-work review | `docs/related_work.md` | Partial (see R1) |
 | DOC4 | Data card | `docs/data_card.md` | Complete |
@@ -150,7 +150,7 @@ Statuses are only: **Complete**, **Partial**, **Failed**, **Missing**, **N/A** (
 | DOC7 | Protocol | `docs/protocol.md` | Complete |
 | DOC8 | Mathematical formulation, methodology | `docs/mathematical_formulation.md`, `docs/methodology.md` | Complete |
 | DOC9 | Experiment log | `docs/experiment_log.md` | Complete |
-| DOC10 | Contributions table | `docs/contributions.md` | Partial — structure only; students must fill names and individual statements |
+| DOC10 | Contributions table | `docs/contributions.md` | Partial — names and roles filled; individual statements still to be written by each student |
 | DOC11 | 16 figures | `results/figures/` (PNG + PDF, captions in `CAPTIONS.md`) | Complete |
 | DOC12 | Results tables | `results/tables/` | Complete |
 | DOC13 | 2–3 page report, compiled and inspected | `report/AFGML_Report.pdf` (3 pages incl. references; no overfull boxes) | Partial — compiled and inspected; student placeholders remain |
@@ -158,5 +158,5 @@ Statuses are only: **Complete**, **Partial**, **Failed**, **Missing**, **N/A** (
 | DOC15 | Beamer slides ≈ 10–12 + backup | `slides/AFGML_Presentation.pdf` (11 main + 3 backup frames, from the course template) | Partial — compiled and inspected; student placeholders remain |
 | DOC16 | Demo README + saved trace | `demo/` | Complete |
 | DOC17 | Individual contribution statements | `docs/contributions.md` | Missing — must be written by each student |
-| DOC18 | All placeholders replaced | report, slides, README | Partial — names and registration numbers filled; team ID, repository URL, submission commit, date remain |
-| DOC19 | Submission tag / evaluator access | — | Missing — no remote repository exists yet |
+| DOC18 | All placeholders replaced | report, slides, README | Partial — names, registration numbers, repository URL and submission tag filled (no team ID exists); evaluation date on the title slide and individual statements remain |
+| DOC19 | Submission tag / evaluator access | — | Partial — repository https://github.com/RockstarCodes/GraphSmoothingInference named; push pending GitHub access |
