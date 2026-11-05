@@ -1,0 +1,83 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.78in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,tabularx,xcolor,graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=*}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\input{../results/tables/results_macros.tex}
+\newcommand{\ci}[3]{#1\,[#2,\,#3]}
+\newcommand{\ProjectTitle}{Does Graph Smoothing Reintroduce Bias into Fair Node Embeddings? An Exact-Inference Audit on Pokec-z}
+\begin{document}
+\begin{center}
+{\Large\bfseries \ProjectTitle}\\[4pt]
+ICT 5143: Algorithms Fairness and Graphical Models Laboratory\\
+Problem 4; Team [Team ID]\\
+{[}Student 1 name, roll number]; [Student 2 name, roll number]\\
+{\small Repository: [repository URL]\\
+Submission commit: \texttt{[commit]}; Date: [submission date]}
+\end{center}
+\begin{abstract}
+We ask whether exact pairwise Markov smoothing undoes the fairness gains of FairWalk embeddings in Pokec-z working-field prediction. On a fixed 2{,}000-node subgraph (5 seeds, 1{,}000 graph-block bootstrap replicates) uniform smoothing changed the gender equal-opportunity gap of the FairWalk pipeline by \RHoneEst{} \ci{}{\RHoneLo}{\RHoneHi} (Holm $p=\RHonePholm$), and our homophily-constrained edge attenuation did not differ from a global scalar (\RHfourEst{} \ci{}{\RHfourLo}{\RHfourHi}). The core graph is gender-heterophilous, so the mechanism is absent. In simulation, smoothing widened group gaps only when demographic homophily and a base-rate gap were both present, and a global scalar matched HCA there too. Findings are subgraph-specific.
+\end{abstract}
+
+\section{Question, context and contribution}
+Stakeholders are social-platform users, graph-learning researchers and fairness auditors. $Y{=}1$ is the FairGNN benchmark's positive working-field class (raw code $\ge 1$; meaning of codes undocumented); $D{=}1$ means the pipeline predicts that class. This is an offline representation audit, not a recruitment system.
+\textbf{Research question:} when does probabilistic graph smoothing undo the fairness gains of debiased embeddings, and can constrained edge potentials reduce this effect? We expected uniform smoothing to widen the gender gap in true-positive rates ($\Delta$EOpp) under demographic homophily and a base-rate gap.\\
+\textbf{Contribution:} (i) a controlled, exact-inference decomposition of fairness change between the embedding stage and a downstream conditional Markov network (CMN), on real and simulated graphs; (ii) homophily-constrained attenuation (HCA) $\lambda_{ij}=\lambda(1-\eta\,\mathbf 1[A_i{=}A_j])$, refuted if it does not beat a global scalar with the same tuning budget (H4).\\
+\textbf{Closest work:} FairWalk~\cite{fairwalk} (reproduced, restricted re-implementation) mitigates at the embedding stage; Correct\&Smooth~\cite{cs} smooths a graph-agnostic predictor without fairness analysis; FairDrop~\cite{fairdrop} attenuates homophilous edges during representation learning, not in downstream potentials. Twelve papers reviewed (nine fully verified, three flagged): \texttt{docs/related\_work.md}.
+
+\section{Data, graphical model and fairness method}
+\textbf{Data and estimand:} Pokec-z from the FairGNN repository~\cite{fairgnn} (SHA-256 recorded; accessed 2026-11-05). Target reproduced from FairGNN code: code $-1$ unlabelled, $0\!\to\!Y{=}0$, $1$--$4\!\to\!Y{=}1$. Protected attribute: recorded gender (0/1; SNAP documents 1 as ``man''); region is a secondary context dimension. Core: labelled-node largest component, BFS ball of 2{,}000 nodes (seeded, label-value blind): 5{,}351 edges, $P(Y{=}1)$ 0.40 (gender 0) vs 0.56 (gender 1). Edge homophily: gender \RHomGender{} (random mixing \RHomGenderRand), region \RHomRegion{} (\RHomRegionRand), label \RHomLabel{} (\RHomLabelRand). Transductive 50/25/25 label splits stratified by $Y\times$gender; the split unit for uncertainty is a Louvain graph block.\\
+\textbf{Graph and inference:} unary $\psi_i$ from an L2 logistic regression on Node2Vec or FairWalk embeddings $H_i$ (fitted on training labels); training labels enter as indicator evidence; validation/test labels are latent. On a label-free maximum-Jaccard spanning forest $E_F$ (\RForestEdges{} edges, \RForestKept\% kept):
+\[
+P(\mathbf Y\mid\mathbf H,\mathbf X,E_F)=\frac1Z\prod_i\psi_i(Y_i;H_i)\!\!\prod_{(i,j)\in E_F}\!\!e^{\lambda_{ij}\mathbf 1[Y_i=Y_j]},\qquad
+q_i=P(Y_i{=}1\mid \mathbf y_{\mathrm{train}}),\ D_i=\mathbf 1[q_i\ge\tau].
+\]
+$q_i$ is computed by exact log-space sum-product (upward/downward passes per tree). The Markov blanket of $Y_i$ is its forest neighbours; each positive neighbour adds $\lambda_{ij}$ to the log-odds, which is how homophilous neighbourhoods can import group base rates.\\
+\textbf{Method and fairness:} $\lambda$ is fitted on five training folds (held-out fold latent, cross-fitted unaries); $\eta$ (HCA) and the global scale $c$ (ablation) are chosen on validation by the same rule: minimise $\Delta$EOpp subject to macro-F1 $\ge$ uniform $-0.02$. Primary criterion: gender $\Delta$EOpp $=\max_g t_g-\min_g t_g$, because base rates of the recorded label differ by gender and the concern is unequal errors among true positives introduced by smoothing; $\Delta$DP, $\Delta$EOdds and intersectional gaps are diagnostics. Primary utility: macro-F1; acceptable loss 0.02. HCA needs $A$ at inference time (FairWalk only at representation time; group thresholds at decision time).
+
+\section{Evaluation protocol}
+Baselines: feature-only LR, SGC (2-hop simple GNN), Node2Vec+LR, FairWalk+LR, per-gender thresholds on Node2Vec (decision-only), and the same CMN with uniform smoothing. Ablations: no pairwise factors, global scalar, Node2Vec instead of FairWalk. All methods share graph, splits, forest, threshold rule (validation-maximal macro-F1) and an 11-point tuning grid; matched-utility operating points use a common validation floor. Five seeds (11--55) refit splits and embeddings. Fixed-model uncertainty: 1{,}000 replicates resampling \RNBlocks{} Louvain blocks (inter-block edge share \RInterblockShare) with identical draws for all methods; paired effects averaged over seeds; percentile 95\% intervals. Confirmatory family H1--H4 ($\Delta$EOpp, Holm), declared before test evaluation; everything else exploratory. Synthetic variability (10 realisations/cell) is reported separately. Exact inference: enumeration, forest sum-product, variable elimination and clique tree agree to \RInfMaxErr{} on \RInfFixtures{} random fixtures (tolerance $10^{-8}$). Mandatory experiments 1--5, ablations and five robustness tests: \texttt{docs/requirements\_matrix.md}.
+
+\section{Results and interpretation}
+\begin{center}\small
+\begin{tabularx}{\linewidth}{Xccccc}
+\toprule
+Test, mean of 5 seeds [95\% block CI] & macro-F1 & $\Delta$EOpp gender & $\Delta$DP gender & Brier \\
+\midrule
+Node2Vec+LR (unmitigated) & \RNVLrMacroF & \ci{\RNVLrDeoppG}{\RNVLrDeoppGLo}{\RNVLrDeoppGHi} & \RNVLrDdpG & \RNVLrBrier\\
+FairWalk+LR (embedding-only) & \RFwLrMacroF & \ci{\RFwLrDeoppG}{\RFwLrDeoppGLo}{\RFwLrDeoppGHi} & \RFwLrDdpG & \RFwLrBrier\\
+FairWalk+uniform CMN & \RFwUniformMacroF & \ci{\RFwUniformDeoppG}{\RFwUniformDeoppGLo}{\RFwUniformDeoppGHi} & \RFwUniformDdpG & \RFwUniformBrier\\
+FairWalk+global scalar (abl.~B) & \RFwGlobalMacroF & \ci{\RFwGlobalDeoppG}{\RFwGlobalDeoppGLo}{\RFwGlobalDeoppGHi} & \RFwGlobalDdpG & \RFwGlobalBrier\\
+FairWalk+HCA (proposed) & \RFwHcaMacroF & \ci{\RFwHcaDeoppG}{\RFwHcaDeoppGLo}{\RFwHcaDeoppGHi} & \RFwHcaDdpG & \RFwHcaBrier\\
+Node2Vec+group thresholds & \RNVThrMacroF & \ci{\RNVThrDeoppG}{\RNVThrDeoppGLo}{\RNVThrDeoppGHi} & \RNVThrDdpG & \RNVThrBrier\\
+\bottomrule
+\end{tabularx}
+\end{center}
+{\small \textbf{Table note:} About 500 test nodes per seed; every gender and gender$\times$region cell has $\ge$\RMinTestCell{} positives and negatives in every seed (none below the 30-observation flag). Intervals for absolute gaps are percentile intervals of $|\text{gap}|$ and are pushed away from zero, so a near-zero estimate can fall below its interval (group thresholds). Default (validation-maximal macro-F1) thresholds. Paired effects (mean over seeds [95\% block CI], Holm $p$): H1 FairWalk uniform$-$LR \RHoneEst{} [\RHoneLo, \RHoneHi], $p$=\RHonePholm; H2 Node2Vec \RHtwoEst{} [\RHtwoLo, \RHtwoHi], $p$=\RHtwoPholm; H3 HCA$-$uniform \RHthreeEst{} [\RHthreeLo, \RHthreeHi], $p$=\RHthreePholm; H4 HCA$-$global \RHfourEst{} [\RHfourLo, \RHfourHi], $p$=\RHfourPholm.}
+
+\textbf{Main finding:} on Pokec-z, smoothing did not undo or create a gender fairness difference: all four confirmatory effects are near zero with intervals spanning roughly $\pm0.03$. Smoothing improved utility and calibration slightly (Node2Vec: macro-F1 +\RHtwoctxMacroF{} [\RHtwoctxMacroFLo, \RHtwoctxMacroFHi], Brier \RHtwoctxBrier{} [\RHtwoctxBrierLo, \RHtwoctxBrierHi]; exploratory). FairWalk also had little to remove: gender was barely predictable from either embedding (AUROC \RSensNVGender{} vs \RSensFwGender), whereas region was (\RSensNVRegion), so lower attribute predictability did not translate into a measurably fairer decision ($\Delta$EOpp difference \REoneDeoppG{} [\REoneDeoppGLo, \REoneDeoppGHi]).\\
+\textbf{Mechanism and failure:} the ablation without pairwise factors reproduced the unary predictions exactly, so all changes are due to $\psi_{ij}$. The fitted coupling was weak ($\lambda=\RLambdaValues$ in every seed): the forest is somewhat label-homophilous (\RForestHomLabel) but keeps only \RForestKept\% of edges, (mean forest degree 2.0), so the smoothing signal itself was small. In simulation with a fair-by-construction unary, uniform smoothing raised $\Delta$DP by \RSynHnineDoneSmoothDdpMean{} ($\pm$\RSynHnineDoneSmoothDdpSd{} SD over realisations) at demographic homophily 0.9 but \RSynHfiveDoneSmoothDdpMean{} at 0.5 (no homophily), and only \RSynNogapHnineDdp{} at 0.9 without a base-rate gap. Across all 15 homophily$\times$degree cells HCA$-$global on $\Delta$EOpp ranged from \RSynHcaglobMin{} to \RSynHcaglobMax{}: HCA never beat the scalar. Robustness (\RRobConditions{} perturbed conditions $\times$ 5 seeds; dropout, corruption, rewiring, forests, dimensions, label budgets): the smoothing effect on $\Delta$EOpp ranged from $-0.027$ to $0.019$ for FairWalk ($-0.021$ to $0.037$ for Node2Vec; seed means) with no consistent sign; the FairWalk utility gain held under edge perturbations but vanished with the three non-Jaccard forests. HCA's failure case: the validation-selected $\eta$ was unstable across seeds (\REtaFwList), i.e.\ a 500-node validation set cannot reliably tune a fairness-targeted parameter whose test effect is within block-bootstrap noise. Decision-only thresholds cut $\Delta$EOpp to \RNVThrDeoppG{} but raised $\Delta$DP to \RNVThrDdpG{}. Full curves: \texttt{results/figures/}.
+
+\section{Limitations, ethics and conclusion}
+Real evidence comes from one BFS subgraph with gender heterophily; other subgraphs or Pokec-n may behave differently. Synthetic effects are properties of the simulator, not of Pokec. The forest keeps only \RForestKept\% of edges; loopy BP on the full graph is only an approximate reference. Recorded gender is a binary profile field; region is predictable from embeddings, so releasing embeddings leaks region. HCA treats edges differently by group and is not justified by our evidence. The label has no defensible employment use. Conclusion: smoothing reintroduces bias only where neighbourhoods carry group base rates; on this Pokec-z subgraph they do not for gender, and HCA offers no advantage over simply weakening smoothing. Next experiment: repeat on region-homophilous subgraphs with region as the primary attribute.
+
+\section*{Reproducibility and individual contributions}
+\begin{sloppypar}\noindent\textbf{Reproduce:} \texttt{scripts/run\_experiments.py}, \texttt{run\_synthetic.py}, \texttt{run\_robustness.py}, \texttt{evaluate.py}, \texttt{make\_results.py} with the frozen \texttt{configs/} (exact commands in \texttt{README.md}); environment \texttt{requirements-lock.txt} (Python 3.13, CPU).\end{sloppypar}
+\textbf{Student 1:} [concrete artifacts and the cross-check of Student 2's work].\\
+\textbf{Student 2:} [concrete artifacts and the cross-check of Student 1's work].\\
+\textbf{Evidence:} \texttt{docs/requirements\_matrix.md} and \texttt{results/}.\\ AI assistance is disclosed in \texttt{docs/contributions.md}.
+
+\begin{thebibliography}{9}\small
+\bibitem{fairwalk} T.~Rahman, B.~Surma, M.~Backes, Y.~Zhang. Fairwalk: Towards Fair Graph Embedding. IJCAI 2019, 3289--3295. doi:10.24963/ijcai.2019/456.
+\bibitem{fairgnn} E.~Dai, S.~Wang. Say No to the Discrimination: Learning Fair Graph Neural Networks with Limited Sensitive Attribute Information. WSDM 2021; data and code \url{https://github.com/EnyanDai/FairGNN}, accessed 2026-11-05.
+\bibitem{cs} Q.~Huang, H.~He, A.~Singh, S.-N.~Lim, A.~R.~Benson. Combining Label Propagation and Simple Models Out-performs Graph Neural Networks. ICLR 2021. arXiv:2010.13993.
+\bibitem{fairdrop} I.~Spinelli, S.~Scardapane, A.~Hussain, A.~Uncini. FairDrop: Biased Edge Dropout for Enhancing Fairness in Graph Representation Learning. doi:10.1109/TAI.2021.3133818.
+\bibitem{hardt} M.~Hardt, E.~Price, N.~Srebro. Equality of Opportunity in Supervised Learning. NeurIPS 2016. arXiv:1610.02413.
+\bibitem{kf} D.~Koller, N.~Friedman. Probabilistic Graphical Models: Principles and Techniques. MIT Press, 2009.
+\bibitem{pokec} L.~Takac, M.~Zabovsky. Data Analysis in Public Social Networks. Present Day Trends of Innovations, 2012.
+\end{thebibliography}
+\end{document}

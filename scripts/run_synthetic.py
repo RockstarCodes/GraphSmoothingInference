@@ -2,6 +2,9 @@
 label homophily and training-label availability; plus a small Node2Vec/FairWalk check.
 
 Usage: python scripts/run_synthetic.py --config configs/synthetic.yaml [--smoke]
+       python scripts/run_synthetic.py --config configs/synthetic.yaml --extra
+--extra runs only the group-size and label-prevalence designs (added after the main grid) and
+merges them into synthetic_realisations.csv, replacing earlier rows of those two designs.
 """
 import argparse
 import itertools
@@ -67,6 +70,7 @@ def main() -> None:
     ap.add_argument("--config", default="configs/synthetic.yaml")
     ap.add_argument("--smoke", action="store_true", help="tiny run for the smoke test")
     ap.add_argument("--n-jobs", type=int, default=4)
+    ap.add_argument("--extra", action="store_true", help="group-size and prevalence designs only")
     args = ap.parse_args()
     log = setup_logging("run_synthetic")
     cfg = load_config(args.config)
@@ -78,6 +82,9 @@ def main() -> None:
     if args.smoke:
         base = replace(base, n_nodes=300)
         gr = {"group_homophily": [0.5, 0.9], "degree_ratio": [1.0], "label_homophily": [0.7], "train_fraction": [0.5]}
+    if args.extra:
+        _extra(cfg, base, b, R, out, args, log)
+        return
     tasks = []
     # (i) 2-D grid: demographic homophily x degree imbalance (other factors at base)
     for h, dr in itertools.product(gr["group_homophily"], gr["degree_ratio"]):
@@ -129,6 +136,38 @@ def main() -> None:
            "python scripts/run_synthetic.py --config " + args.config + (" --smoke" if args.smoke else ""),
            cfg["_config_path"], seed="5000+r", runtime_s=time.time() - t, data_ver="synthetic")
     log.info("embedding check done in %.1fs", time.time() - t)
+
+
+def _extra(cfg, base, b, R, out, args, log):
+    """(v) group sizes and (vi) label prevalence, one factor at a time at group_homophily 0.8."""
+    ex = cfg["extra"]
+    tasks = []
+    for gs in ex["group_share"]:
+        sc = replace(base, group_homophily=0.8, group_share=gs)
+        for r in range(R):
+            tasks.append(({"design": "group_share", "group_homophily": 0.8, "degree_ratio": 1.0, "group_share": gs,
+                           "label_homophily": base.label_homophily, "train_fraction": b["train_fraction"]}, sc,
+                          6000 + r, b["train_fraction"], cfg["lambda"], cfg["eta_grid"], b["unary_strength"],
+                          b["unary_noise"]))
+    for pv in ex["prevalence"]:
+        sc = replace(base, group_homophily=0.8, prevalence=tuple(pv))
+        for r in range(R):
+            tasks.append(({"design": "prevalence", "group_homophily": 0.8, "degree_ratio": 1.0,
+                           "prevalence0": pv[0], "prevalence1": pv[1], "label_homophily": base.label_homophily,
+                           "train_fraction": b["train_fraction"]}, sc, 7000 + r, b["train_fraction"], cfg["lambda"],
+                          cfg["eta_grid"], b["unary_strength"], b["unary_noise"]))
+    t = time.time()
+    with get_context("fork").Pool(args.n_jobs) as pool:
+        rows = pool.map(_task, tasks, chunksize=2)
+    new = pd.DataFrame(rows)
+    path = out / "synthetic_realisations.csv"
+    if path.exists():
+        old = pd.read_csv(path)
+        new = pd.concat([old[~old.design.isin(["group_share", "prevalence"])], new], ignore_index=True)
+    new.to_csv(path, index=False)
+    log.info("extra synthetic designs: %d realisations in %.1fs", len(rows), time.time() - t)
+    record(str(path.relative_to(ROOT)) + "[designs=group_share,prevalence]", "python scripts/run_synthetic.py --config " + args.config + " --extra",
+           cfg["_config_path"], seed="6000+r..7000+r", runtime_s=time.time() - t, data_ver="synthetic")
 
 
 if __name__ == "__main__":

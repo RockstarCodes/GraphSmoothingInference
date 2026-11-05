@@ -1,0 +1,5 @@
+forest,forest_edges,forest_max_degree,degree_spearman_graph_vs_forest,homophily_gender_graph,homophily_gender_forest,homophily_region_graph,homophily_region_forest,homophily_label_graph,homophily_label_forest
+max_jaccard,1999,12,0.5298,0.4493,0.4747,0.9634,0.962,0.5859,0.6293
+bfs,1999,33,0.5187,0.4493,0.4002,0.9634,0.949,0.5859,0.5988
+low_degree,1999,12,0.3156,0.4493,0.4377,0.9634,0.954,0.5859,0.6288
+random,1999,19,0.6836,0.4493,0.4392,0.9634,0.958,0.5859,0.5988

@@ -1,0 +1,8 @@
+# Copy of experiments.yaml used only to re-run seed 11 for the determinism check (scripts/run_experiments.py --config configs/determinism_check.yaml --seeds 11)
+data_config: configs/data.yaml
+embeddings_config: configs/embeddings.yaml
+model_config: configs/model.yaml
+fairness_config: configs/fairness.yaml
+seeds: [11, 22, 33, 44, 55]     # each seed = new stratified label split + new walk/embedding seed
+n_jobs: 4
+output_dir: results/metrics/determinism_check

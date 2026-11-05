@@ -1,0 +1,5 @@
+{"time":"2026-11-05 15:42:15,882","level":"INFO","logger":"run_synthetic","msg":'synthetic grid: 12 realisations in 29.5s'}
+{"time":"2026-11-05 15:42:22,599","level":"INFO","logger":"run_synthetic","msg":'embedding check done in 6.7s'}
+{"time":"2026-11-05 16:21:09,625","level":"INFO","logger":"run_synthetic","msg":'synthetic grid: 230 realisations in 2320.5s'}
+{"time":"2026-11-05 16:22:07,528","level":"INFO","logger":"run_synthetic","msg":'embedding check done in 57.9s'}
+{"time":"2026-11-05 16:25:00,208","level":"INFO","logger":"run_synthetic","msg":'extra synthetic designs: 60 realisations in 162.3s'}

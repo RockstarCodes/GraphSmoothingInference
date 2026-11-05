@@ -1,0 +1,2 @@
+{"time":"2026-11-05 15:40:55,826","level":"INFO","logger":"smoke_test","msg":'smoke test passed in 22.6s; 50 method rows written to /home/claude/AFGML_Problem4/results/smoke'}
+{"time":"2026-11-05 15:49:42,544","level":"INFO","logger":"smoke_test","msg":'smoke test passed in 26.7s; 50 method rows written to /home/claude/AFGML_Problem4/results/smoke'}

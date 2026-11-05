@@ -30,6 +30,7 @@ def main() -> None:
     ap.add_argument("--config", default="configs/robustness.yaml")
     ap.add_argument("--only", nargs="*", default=None)
     ap.add_argument("--n-jobs", type=int, default=4)
+    ap.add_argument("--rerun", action="store_true", help="recompute conditions whose outputs already exist")
     args = ap.parse_args()
     log = setup_logging("run_robustness")
     rc = load_config(args.config)
@@ -56,7 +57,7 @@ def main() -> None:
             plan.append(("labels", f"labels{tf}", None, dict(common, include_lbp=False), tf))
     if args.only:
         plan = [p for p in plan if p[0] in args.only]
-    jobs = [(f"{tag}_seed{s}", s, str(out), cfg, mod, kw, tf) for (_, tag, mod, kw, tf) in plan for s in seeds]
+    jobs = [(f"{tag}_seed{s}", s, str(out), cfg, mod, kw, tf, not args.rerun) for (_, tag, mod, kw, tf) in plan for s in seeds]
     t = time.time()
     res = run_jobs(jobs, args.n_jobs)
     for r in res:

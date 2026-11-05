@@ -1,0 +1,191 @@
+% Compile twice with pdflatex from the slides/ directory. 10 main slides + 3 backup slides.
+\documentclass[aspectratio=169,11pt]{beamer}
+\usetheme{Warsaw}
+\usecolortheme{default}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,booktabs,tabularx,graphicx,tikz}
+\definecolor{afgml}{RGB}{22,57,86}
+\setbeamercolor{structure}{fg=afgml}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\input{../results/tables/results_macros.tex}
+\graphicspath{{../results/figures/}}
+\title[AFGML Capstone]{Does Graph Smoothing Reintroduce Bias into Fair Node Embeddings?}
+\subtitle{ICT 5143: AFGML Capstone | Problem 4}
+\author{[Student 1, roll number] \and [Student 2, roll number]}
+\date{[Evaluation date]}
+\begin{document}
+\begin{frame}\titlepage\end{frame}
+
+\begin{frame}{Research question and decision context}
+\begin{itemize}
+\item Offline audit of node classification on Pokec-z (FairGNN release); not a recruitment system.
+\item $Y=1$: benchmark's positive working-field class (raw code $\ge1$, meaning undocumented). $D=1$: pipeline predicts that class.
+\item \textbf{Question:} when does probabilistic graph smoothing undo the fairness gains of debiased embeddings, and can constrained edge potentials reduce this effect?
+\item \textbf{Hypothesis:} with demographic homophily + base-rate gap, uniform smoothing widens the gender TPR gap ($\Delta$EOpp); falsified if paired block-bootstrap effects are $\le 0$ / not significant after Holm.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Closest work and proposed contribution}
+\begin{itemize}
+\item \textbf{Established:} FairWalk debiases walks (Rahman et al.\ 2019, reproduced); FairDrop/CrossWalk reweight homophilous edges during representation learning; Correct\&Smooth smooths a base predictor, no fairness analysis; FairPSL: fairness in relational MAP inference.
+\item \textbf{Open (within 12 verified papers):} fairness change \emph{between} a fixed debiased embedding and a downstream exact CMN, under controlled homophily.
+\item \textbf{Contribution:} exact-inference decomposition + homophily-constrained attenuation (HCA) $\lambda_{ij}=\lambda(1-\eta\,\mathbf 1[A_i{=}A_j])$.
+\item \textbf{Evidence needed:} HCA must beat a \emph{global scalar} with the same tuning budget (H4); otherwise it is just ``smooth less''.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Data and evaluation population}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{itemize}\small
+\item Fixed core: 2{,}000 labelled nodes, 5{,}351 edges (BFS, seed 20261105, label-value blind).
+\item $P(Y{=}1)$: gender 0 \textbf{0.40}, gender 1 \textbf{0.56}.
+\item Edge homophily: gender \RHomGender{} (random \RHomGenderRand), region \RHomRegion, label \RHomLabel.
+\item Transductive 50/25/25 splits $\times$ 5 seeds; test cells $\ge$\RMinTestCell{} per seed.
+\item Gender: recorded code only, never inferred.
+\end{itemize}
+\column{0.5\textwidth}
+\includegraphics[width=\linewidth]{fig05_homophily.png}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Graphical model and inference}
+\begin{columns}
+\column{0.42\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.85,every node/.style={draw,circle,minimum size=7mm,inner sep=0pt,font=\small}]
+\node[fill=gray!25] (a) at (0,0) {$Y_1$};
+\node (b) at (1.6,0.6) {$Y_2$};
+\node[fill=gray!25] (c) at (1.6,-0.9) {$Y_3$};
+\node (d) at (3.2,0) {$Y_4$};
+\draw (a)--(b) (a)--(c) (b)--(d);
+\foreach \n/\x/\y in {a/0/1.2,b/1.6/1.8,c/1.6/-2.1,d/3.2/1.2}{\node[rectangle,minimum size=4mm,fill=black!70] (u\n) at (\x,\y) {}; \draw (u\n)--(\n);}
+\end{tikzpicture}\\[2pt]
+{\scriptsize grey = observed training label; squares = unary $\psi_i(Y_i;H_i)$; edges = $\psi_{ij}$ on forest $E_F$}
+\column{0.58\textwidth}
+\[
+P(\mathbf Y\!\mid\!\mathbf H,E_F)=\tfrac1Z\prod_i\psi_i(Y_i)\!\!\prod_{(i,j)\in E_F}\!\!e^{\lambda_{ij}\mathbf 1[Y_i=Y_j]}
+\]
+\begin{itemize}\small
+\item Query: $q_i=P(Y_i{=}1\mid\mathbf y_{\mathrm{train}})$, exact log-space sum-product on max-Jaccard forest (\RForestKept\% of edges).
+\item Markov blanket = forest neighbours; each positive neighbour adds $\lambda_{ij}$ to log-odds.
+\item Validation: enumeration = sum-product = VE = clique tree, max error \RInfMaxErr{} on \RInfFixtures{} fixtures (tol.\ $10^{-8}$).
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Fairness criterion and proposed method}
+\begin{itemize}
+\item \textbf{Primary:} gender $\Delta$EOpp $=\max_g\mathrm{TPR}_g-\min_g\mathrm{TPR}_g$: base rates of the recorded label differ, the risk is unequal errors among true positives. Diagnostics: $\Delta$DP, $\Delta$EOdds, $R_{sel}$, intersectional, calibration.
+\item \textbf{Utility:} macro-F1; acceptable loss 0.02 (validation).
+\item \textbf{HCA:} $\lambda$ fit on training folds (held-out log-likelihood); $\eta$ = argmin val $\Delta$EOpp s.t.\ val F1 $\ge$ uniform $-0.02$.
+\item \textbf{Protected attribute at prediction time:} HCA yes (edge weights); FairWalk only for walks; group thresholds yes.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Experimental protocol}
+\begin{itemize}
+\item Baselines: feature LR, SGC, Node2Vec+LR, FairWalk+LR, group thresholds, uniform CMN; ablations: no pairwise, global scalar, Node2Vec for FairWalk.
+\item Same graph, splits, forest, threshold rule and 11-point grids for every method.
+\item 5 seeds (training variability) \textbf{separately from} 1{,}000 Louvain-block bootstrap replicates (\RNBlocks{} blocks; evaluation uncertainty) and 10 synthetic realisations/cell.
+\item Confirmatory H1--H4 (Holm), declared before test evaluation; all else exploratory.
+\item Exp.~4: simulated homophily $\times$ degree imbalance; Exp.~5 + robustness: dropout, corruption, rewiring, 4 forests, 3 dims, 4 label budgets.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Main result and uncertainty}
+\begin{columns}
+\column{0.40\textwidth}
+\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lccc}\toprule
+Method & F1 & $\Delta$EOpp & Brier\\\midrule
+Node2Vec+LR & \RNVLrMacroF & \RNVLrDeoppG & \RNVLrBrier\\
+FairWalk+LR & \RFwLrMacroF & \RFwLrDeoppG & \RFwLrBrier\\
+FW+uniform & \RFwUniformMacroF & \RFwUniformDeoppG & \RFwUniformBrier\\
+FW+global & \RFwGlobalMacroF & \RFwGlobalDeoppG & \RFwGlobalBrier\\
+FW+HCA & \RFwHcaMacroF & \RFwHcaDeoppG & \RFwHcaBrier\\
+N2V+thresholds & \RNVThrMacroF & \RNVThrDeoppG & \RNVThrBrier\\\bottomrule
+\end{tabular}\\[6pt]
+\textbf{H1} uniform$-$LR (FW): \RHoneEst{} [\RHoneLo, \RHoneHi], Holm $p$=\RHonePholm\\
+\textbf{H4} HCA$-$global: \RHfourEst{} [\RHfourLo, \RHfourHi], Holm $p$=\RHfourPholm
+\column{0.60\textwidth}
+\includegraphics[width=\linewidth]{fig07_fairness_before_after_smoothing.png}\\
+\textbf{Answer:} on this subgraph smoothing neither undid nor created a gender gap; HCA $\approx$ global scalar.
+\end{columns}
+\end{frame}
+
+\begin{frame}{When does smoothing reintroduce bias? (SIMULATED)}
+\begin{columns}
+\column{0.62\textwidth}
+\includegraphics[width=\linewidth]{fig11_synthetic_homophily.png}
+\column{0.38\textwidth}\footnotesize
+\small
+\begin{itemize}
+\item Unary fair by construction; uniform $\lambda=1$.
+\item $\Delta$DP change: \RSynHnineDoneSmoothDdpMean{} at homophily 0.9 vs \RSynHfiveDoneSmoothDdpMean{} at 0.5 (SD over 10 realisations).
+\item No base-rate gap: only \RSynNogapHnineDdp{} at 0.9. HCA$-$global: \RSynHcaglobMin{} to \RSynHcaglobMax{}.
+\item Pokec-z gender sits at the no-homophily end (\RHomGender), consistent with the real-data null.
+\item Simulated mechanism $\neq$ fact about Pokec.
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Ablation, robustness and failure case}
+\begin{itemize}
+\item \textbf{Ablation A:} no pairwise factors reproduces unary predictions exactly ($\Delta$ = 0).
+\item \textbf{Ablation B:} HCA vs global scalar \RHfourEst{} [\RHfourLo, \RHfourHi] --- no evidence group-aware attenuation helps.
+\item \textbf{Ablation C:} Node2Vec HCA$-$uniform \REthreeDeoppG{} [\REthreeDeoppGLo, \REthreeDeoppGHi].
+\item \textbf{Robustness} (\RRobConditions{} conditions): smoothing effect on $\Delta$EOpp $-0.027$ to $0.019$ (FairWalk), no consistent sign; F1 gain needs the Jaccard forest.
+\item \textbf{Failure:} validation-selected $\eta$ unstable across seeds (\REtaFwList); weak fitted coupling $\lambda=\RLambdaValues$.
+\item Decision thresholds: $\Delta$EOpp \RNVThrDeoppG{} but $\Delta$DP \RNVThrDdpG{} --- criteria conflict.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusion and reproducibility}
+\begin{itemize}
+\item \textbf{Conclusion:} smoothing reintroduces bias only when neighbourhoods carry group base rates; not the case for gender on this Pokec-z subgraph. HCA gives no gain over weaker smoothing.
+\item \textbf{Limits/ethics:} one subgraph; region leaks from embeddings (AUROC \RSensNVRegion); HCA is differential edge treatment; label has no employment use.
+\item \textbf{Reproduce:} \texttt{scripts/run\_experiments.py}, \texttt{evaluate.py}, \texttt{make\_results.py}; commit [hash].
+\item Student 1: [contribution and verification]. Student 2: [contribution and verification].
+\end{itemize}
+\end{frame}
+
+\appendix
+\begin{frame}{Backup: mandatory evidence}
+\footnotesize
+\begin{tabular}{ll}\toprule
+Requirement & Artifact\\\midrule
+Exp.~1 Node2Vec reproduction & \texttt{results/metrics/main/}, Fig.~6, 8\\
+Exp.~2 uniform smoothing, both embeddings & H1, H2, Fig.~7\\
+Exp.~3 attenuation vs embedding/decision mitigation & H3, H4, E6, E7, Fig.~9\\
+Exp.~4 synthetic homophily/degree & Fig.~11, 12\\
+Exp.~5 missing/corrupted edges, forest loss & Fig.~13, 14\\
+Ablations A--C & \texttt{table\_ablations\_and\_comparisons.csv}\\
+Robustness (5 tests) & \texttt{table\_robustness*.csv}\\
+Full matrix & \texttt{docs/requirements\_matrix.md}\\\bottomrule
+\end{tabular}
+\end{frame}
+
+\begin{frame}{Backup: inference and statistical validation}
+\begin{columns}
+\column{0.5\textwidth}
+\includegraphics[width=\linewidth]{fig16_inference_agreement.png}
+\column{0.5\textwidth}\small
+\begin{itemize}
+\item Tests: factor scopes, indexing, evidence, normalisation, isolated nodes, components, zero mass, joint CI $\{0,1\}\perp\{3,4,5\}\mid 2$, Markov blanket vs enumeration.
+\item Bootstrap: Louvain blocks, identical draws across methods, inter-block edge share \RInterblockShare.
+\item Holm over H1--H4; effect sizes = paired differences + per-seed range.
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Backup: demonstration and individual defence}
+\begin{itemize}
+\item Live: \texttt{python scripts/smoke\_test.py} (~30\,s, simulated) and \texttt{python scripts/verify\_inference.py} (~10\,s).
+\item Real: \texttt{run\_experiments.py --seeds 11 --n-jobs 1} (~4 min).
+\item Fallback: \texttt{demo/saved\_trace.txt}.
+\item Each student: trace one message $m_{u\to v}$, justify EOpp over DP, critique the HCA claim.
+\end{itemize}
+\end{frame}
+\end{document}

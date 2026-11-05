@@ -1,0 +1,7 @@
+{"time":"2026-11-05 15:46:56,710","level":"INFO","logger":"matplotlib.category","msg":'Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.'}
+{"time":"2026-11-05 15:46:56,710","level":"INFO","logger":"matplotlib.category","msg":'Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.'}
+{"time":"2026-11-05 15:46:59,735","level":"INFO","logger":"make_results","msg":"made 12 figures; missing inputs: ['synthetic', 'robustness']"}
+{"time":"2026-11-05 15:48:10,363","level":"INFO","logger":"make_results","msg":"made 12 figures; missing inputs: ['synthetic', 'robustness']"}
+{"time":"2026-11-05 16:25:18,142","level":"INFO","logger":"make_results","msg":'made 16 figures; missing inputs: none'}
+{"time":"2026-11-05 16:26:06,577","level":"INFO","logger":"make_results","msg":'made 16 figures; missing inputs: none'}
+{"time":"2026-11-05 16:26:54,676","level":"INFO","logger":"make_results","msg":'made 16 figures; missing inputs: none'}

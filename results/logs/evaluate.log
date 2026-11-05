@@ -1,0 +1,2 @@
+{"time":"2026-11-05 15:41:26,390","level":"INFO","logger":"evaluate","msg":'bootstrap computed in 24.9s'}
+{"time":"2026-11-05 15:41:26,827","level":"INFO","logger":"evaluate","msg":'confirmatory:\n   id  estimate_mean_over_seeds  ci95_low  ci95_high  p_unadjusted  p_holm\n0  H1                  0.001629 -0.037986   0.021589      0.593407     1.0\n1  H2                  0.001327 -0.028067   0.039372      0.787213     1.0\n2  H3                  0.003677 -0.020156   0.025943      0.753247     1.0\n3  H4                  0.000072 -0.036614   0.023221      0.811189     1.0'}

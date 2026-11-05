@@ -28,7 +28,7 @@ KEY_METHODS = ["feat_lr", "sgc", "n2v_lr", "fw_lr", "n2v_thr", "n2v_nopair", "fw
                "n2v_global", "fw_global", "n2v_hca", "fw_hca", "n2v_lbp_uniform", "fw_lbp_uniform",
                "n2v_hca_region", "fw_hca_region", "fwr_lr", "fwr_uniform", "fwr_hca_region", "fwr_global_region",
                "n2v_global_region", "fw_global_region"]
-METRICS = ["dEOpp_g", "dDP_g", "dEOdds_g", "dEOpp_r", "dDP_r", "macro_f1", "balanced_acc", "brier", "log_loss"]
+METRICS = ["dEOpp_g", "dDP_g", "dEOdds_g", "dEOpp_r", "dDP_r", "dEOdds_r", "macro_f1", "balanced_acc", "brier", "log_loss"]
 
 EXPLORATORY = [
     ("E1", "fw_lr", "n2v_lr", "embedding-only mitigation (FairWalk vs Node2Vec), no smoothing"),

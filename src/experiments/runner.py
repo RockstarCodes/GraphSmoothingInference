@@ -41,7 +41,10 @@ def save_run(out_dir: Path, tag: str, split, run, rows_test, rows_val) -> None:
 
 
 def _job(args):
-    (tag, seed, out_dir, cfg, graph_mod, kwargs, train_fraction) = args
+    (tag, seed, out_dir, cfg, graph_mod, kwargs, train_fraction) = args[:7]
+    skip_existing = args[7] if len(args) > 7 else False
+    if skip_existing and (Path(out_dir) / f"{tag}_metrics.csv").exists():
+        return {"tag": tag, "seed": seed, "status": "ok", "runtime_s": None, "reused": True}
     prep = Prepared.load(ROOT / cfg["data"]["dataset"]["processed_path"])
     g = graph_from_prepared(prep)
     split = stratified_split(g.y, g.gender, seed, tuple(cfg["data"]["split"]["fractions"]),

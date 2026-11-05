@@ -17,6 +17,9 @@ grid:
   label_homophily: [0.55, 0.7, 0.85]
   train_fraction: [0.1, 0.25, 0.5]
 realizations: 10
+extra:                            # added after the main grid (run with --extra); homophily 0.8
+  group_share: [0.2, 0.35, 0.5]   # share of group 1
+  prevalence: [[0.2, 0.4], [0.4, 0.6], [0.6, 0.8]]  # P(Y=1|A=0), P(Y=1|A=1): same 0.2 gap, different prevalence
 lambda: 1.0
 eta_grid: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
 embedding_check:                  # smaller Node2Vec/FairWalk check on synthetic graphs

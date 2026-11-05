@@ -37,7 +37,7 @@ def setup_logging(name: str) -> logging.Logger:
         sh = logging.StreamHandler()
         sh.setFormatter(logging.Formatter("%(levelname)s %(name)s: %(message)s"))
         root.addHandler(sh)
-    for noisy in ("gensim", "smart_open"):
+    for noisy in ("gensim", "smart_open", "matplotlib"):
         logging.getLogger(noisy).setLevel(logging.WARNING)
     return logging.getLogger(name)
 

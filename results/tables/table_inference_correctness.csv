@@ -1,0 +1,8 @@
+check,max_abs_difference,fixtures,tolerance,pass
+sum-product vs enumeration,1.5681900222830336e-15,100,1e-08,True
+VE vs enumeration,1.5543122344752192e-15,200,1e-08,True
+clique tree vs enumeration,1.5543122344752192e-15,200,1e-08,True
+VE vs clique tree,2.220446049250313e-16,200,1e-08,True
+VE: random vs min-fill order,2.220446049250313e-16,200,1e-08,True
+clique-tree sepset calibration,2.220446049250313e-16,200,1e-08,True
+|log Z| sum-product vs enumeration,2.220446049250313e-15,100,1e-08,True

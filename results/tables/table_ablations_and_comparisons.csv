@@ -1,0 +1,91 @@
+id,description,a,b,metric,estimate_mean_over_seeds,ci95_low,ci95_high,p_unadjusted
+E1,"embedding-only mitigation (FairWalk vs Node2Vec), no smoothing",fw_lr,n2v_lr,dEOpp_g,-0.0145,-0.0393,0.0324,0.7073
+E1,"embedding-only mitigation (FairWalk vs Node2Vec), no smoothing",fw_lr,n2v_lr,dDP_g,-0.0026,-0.0284,0.0331,0.8492
+E1,"embedding-only mitigation (FairWalk vs Node2Vec), no smoothing",fw_lr,n2v_lr,dEOdds_g,0.0003,-0.0445,0.0346,0.9291
+E1,"embedding-only mitigation (FairWalk vs Node2Vec), no smoothing",fw_lr,n2v_lr,dEOpp_r,0.0171,-0.0546,0.0691,0.8152
+E1,"embedding-only mitigation (FairWalk vs Node2Vec), no smoothing",fw_lr,n2v_lr,dDP_r,0.0166,-0.0449,0.0617,0.7952
+E1,"embedding-only mitigation (FairWalk vs Node2Vec), no smoothing",fw_lr,n2v_lr,dEOdds_r,0.0171,-0.0678,0.0719,0.8272
+E1,"embedding-only mitigation (FairWalk vs Node2Vec), no smoothing",fw_lr,n2v_lr,macro_f1,-0.0101,-0.0225,0.0048,0.1279
+E1,"embedding-only mitigation (FairWalk vs Node2Vec), no smoothing",fw_lr,n2v_lr,balanced_acc,-0.0116,-0.0246,0.0001,0.0559
+E1,"embedding-only mitigation (FairWalk vs Node2Vec), no smoothing",fw_lr,n2v_lr,brier,0.0011,-0.0024,0.004,0.4915
+E1,"embedding-only mitigation (FairWalk vs Node2Vec), no smoothing",fw_lr,n2v_lr,log_loss,0.0021,-0.0062,0.0086,0.5634
+E2,decision-only mitigation (group thresholds) vs Node2Vec,n2v_thr,n2v_lr,dEOpp_g,-0.0882,-0.1082,0.076,0.3297
+E2,decision-only mitigation (group thresholds) vs Node2Vec,n2v_thr,n2v_lr,dDP_g,0.0639,-0.0127,0.1194,0.1319
+E2,decision-only mitigation (group thresholds) vs Node2Vec,n2v_thr,n2v_lr,dEOdds_g,-0.0252,-0.0792,0.0838,0.8412
+E2,decision-only mitigation (group thresholds) vs Node2Vec,n2v_thr,n2v_lr,dEOpp_r,-0.0129,-0.0481,0.0229,0.4655
+E2,decision-only mitigation (group thresholds) vs Node2Vec,n2v_thr,n2v_lr,dDP_r,-0.0008,-0.0309,0.0317,0.7852
+E2,decision-only mitigation (group thresholds) vs Node2Vec,n2v_thr,n2v_lr,dEOdds_r,-0.0129,-0.0518,0.0166,0.2617
+E2,decision-only mitigation (group thresholds) vs Node2Vec,n2v_thr,n2v_lr,macro_f1,0.0001,-0.0159,0.0179,0.965
+E2,decision-only mitigation (group thresholds) vs Node2Vec,n2v_thr,n2v_lr,balanced_acc,-0.0011,-0.0164,0.0127,0.8771
+E2,decision-only mitigation (group thresholds) vs Node2Vec,n2v_thr,n2v_lr,brier,0.0,0.0,0.0,1.0
+E2,decision-only mitigation (group thresholds) vs Node2Vec,n2v_thr,n2v_lr,log_loss,0.0,0.0,0.0,1.0
+E3,"HCA vs uniform, Node2Vec embeddings (ablation C)",n2v_hca,n2v_uniform,dEOpp_g,0.0039,-0.0134,0.0198,0.6414
+E3,"HCA vs uniform, Node2Vec embeddings (ablation C)",n2v_hca,n2v_uniform,dDP_g,0.0028,-0.0075,0.0132,0.4496
+E3,"HCA vs uniform, Node2Vec embeddings (ablation C)",n2v_hca,n2v_uniform,dEOdds_g,0.0039,-0.0112,0.0161,0.5654
+E3,"HCA vs uniform, Node2Vec embeddings (ablation C)",n2v_hca,n2v_uniform,dEOpp_r,-0.0155,-0.0283,0.0215,0.4456
+E3,"HCA vs uniform, Node2Vec embeddings (ablation C)",n2v_hca,n2v_uniform,dDP_r,-0.005,-0.0128,0.0102,0.6633
+E3,"HCA vs uniform, Node2Vec embeddings (ablation C)",n2v_hca,n2v_uniform,dEOdds_r,-0.0167,-0.0298,0.0152,0.3477
+E3,"HCA vs uniform, Node2Vec embeddings (ablation C)",n2v_hca,n2v_uniform,macro_f1,-0.0005,-0.0046,0.0058,0.9171
+E3,"HCA vs uniform, Node2Vec embeddings (ablation C)",n2v_hca,n2v_uniform,balanced_acc,-0.001,-0.005,0.0041,0.6753
+E3,"HCA vs uniform, Node2Vec embeddings (ablation C)",n2v_hca,n2v_uniform,brier,-0.0001,-0.0005,0.0002,0.5375
+E3,"HCA vs uniform, Node2Vec embeddings (ablation C)",n2v_hca,n2v_uniform,log_loss,-0.0004,-0.0015,0.0005,0.3996
+E4,"HCA vs global scalar, Node2Vec (ablation B)",n2v_hca,n2v_global,dEOpp_g,0.0013,-0.0177,0.0267,0.8831
+E4,"HCA vs global scalar, Node2Vec (ablation B)",n2v_hca,n2v_global,dDP_g,-0.0064,-0.0159,0.0149,0.9031
+E4,"HCA vs global scalar, Node2Vec (ablation B)",n2v_hca,n2v_global,dEOdds_g,0.0013,-0.0159,0.025,0.9371
+E4,"HCA vs global scalar, Node2Vec (ablation B)",n2v_hca,n2v_global,dEOpp_r,-0.0223,-0.0371,0.0314,0.5554
+E4,"HCA vs global scalar, Node2Vec (ablation B)",n2v_hca,n2v_global,dDP_r,-0.0,-0.0192,0.0121,0.6893
+E4,"HCA vs global scalar, Node2Vec (ablation B)",n2v_hca,n2v_global,dEOdds_r,-0.0131,-0.041,0.023,0.4096
+E4,"HCA vs global scalar, Node2Vec (ablation B)",n2v_hca,n2v_global,macro_f1,0.0035,-0.0034,0.0118,0.3237
+E4,"HCA vs global scalar, Node2Vec (ablation B)",n2v_hca,n2v_global,balanced_acc,0.0034,-0.0033,0.0105,0.3277
+E4,"HCA vs global scalar, Node2Vec (ablation B)",n2v_hca,n2v_global,brier,-0.0009,-0.0024,0.0007,0.2817
+E4,"HCA vs global scalar, Node2Vec (ablation B)",n2v_hca,n2v_global,log_loss,-0.0021,-0.0062,0.0019,0.3457
+E5,no-pairwise ablation equals unary (ablation A),fw_nopair,fw_lr,dEOpp_g,0.0,0.0,0.0,1.0
+E5,no-pairwise ablation equals unary (ablation A),fw_nopair,fw_lr,dDP_g,0.0,0.0,0.0,1.0
+E5,no-pairwise ablation equals unary (ablation A),fw_nopair,fw_lr,dEOdds_g,0.0,0.0,0.0,1.0
+E5,no-pairwise ablation equals unary (ablation A),fw_nopair,fw_lr,dEOpp_r,0.0,0.0,0.0,1.0
+E5,no-pairwise ablation equals unary (ablation A),fw_nopair,fw_lr,dDP_r,0.0,0.0,0.0,1.0
+E5,no-pairwise ablation equals unary (ablation A),fw_nopair,fw_lr,dEOdds_r,0.0,0.0,0.0,1.0
+E5,no-pairwise ablation equals unary (ablation A),fw_nopair,fw_lr,macro_f1,0.0,0.0,0.0,1.0
+E5,no-pairwise ablation equals unary (ablation A),fw_nopair,fw_lr,balanced_acc,0.0,0.0,0.0,1.0
+E5,no-pairwise ablation equals unary (ablation A),fw_nopair,fw_lr,brier,-0.0,-0.0,0.0,0.1319
+E5,no-pairwise ablation equals unary (ablation A),fw_nopair,fw_lr,log_loss,-0.0,-0.0,0.0,0.0839
+E6,proposed vs decision-only mitigation,fw_hca,n2v_thr,dEOpp_g,0.079,-0.091,0.1112,0.4655
+E6,proposed vs decision-only mitigation,fw_hca,n2v_thr,dDP_g,-0.0598,-0.1263,0.038,0.2478
+E6,proposed vs decision-only mitigation,fw_hca,n2v_thr,dEOdds_g,0.0223,-0.0985,0.0823,0.9231
+E6,proposed vs decision-only mitigation,fw_hca,n2v_thr,dEOpp_r,0.0239,-0.052,0.0853,0.6354
+E6,proposed vs decision-only mitigation,fw_hca,n2v_thr,dDP_r,0.0273,-0.0492,0.0702,0.5235
+E6,proposed vs decision-only mitigation,fw_hca,n2v_thr,dEOdds_r,0.0349,-0.0375,0.0919,0.3856
+E6,proposed vs decision-only mitigation,fw_hca,n2v_thr,macro_f1,-0.0074,-0.0315,0.0159,0.4735
+E6,proposed vs decision-only mitigation,fw_hca,n2v_thr,balanced_acc,-0.0082,-0.0307,0.015,0.4555
+E6,proposed vs decision-only mitigation,fw_hca,n2v_thr,brier,-0.0016,-0.0081,0.0036,0.5435
+E6,proposed vs decision-only mitigation,fw_hca,n2v_thr,log_loss,-0.004,-0.0197,0.0094,0.5674
+E7,proposed vs embedding-only mitigation,fw_hca,fw_lr,dEOpp_g,0.0053,-0.0408,0.0204,0.8691
+E7,proposed vs embedding-only mitigation,fw_hca,fw_lr,dDP_g,0.0067,-0.0188,0.0285,0.6094
+E7,proposed vs embedding-only mitigation,fw_hca,fw_lr,dEOdds_g,-0.0032,-0.0385,0.0238,0.8891
+E7,proposed vs embedding-only mitigation,fw_hca,fw_lr,dEOpp_r,-0.0062,-0.0295,0.0333,0.7992
+E7,proposed vs embedding-only mitigation,fw_hca,fw_lr,dDP_r,0.0099,-0.0239,0.0305,0.5115
+E7,proposed vs embedding-only mitigation,fw_hca,fw_lr,dEOdds_r,0.0049,-0.0319,0.0517,0.8551
+E7,proposed vs embedding-only mitigation,fw_hca,fw_lr,macro_f1,0.0028,-0.0122,0.0154,0.6194
+E7,proposed vs embedding-only mitigation,fw_hca,fw_lr,balanced_acc,0.0024,-0.0123,0.0146,0.6434
+E7,proposed vs embedding-only mitigation,fw_hca,fw_lr,brier,-0.0027,-0.0064,0.0006,0.1039
+E7,proposed vs embedding-only mitigation,fw_hca,fw_lr,log_loss,-0.0061,-0.0157,0.0028,0.2018
+H3-ctx,HCA changes gender EOpp gap relative to uniform smoothing,fw_hca,fw_uniform,dEOpp_g,0.0037,-0.0202,0.0259,0.7532
+H3-ctx,HCA changes gender EOpp gap relative to uniform smoothing,fw_hca,fw_uniform,dDP_g,0.0067,-0.0118,0.0268,0.4595
+H3-ctx,HCA changes gender EOpp gap relative to uniform smoothing,fw_hca,fw_uniform,dEOdds_g,0.009,-0.0156,0.0369,0.3556
+H3-ctx,HCA changes gender EOpp gap relative to uniform smoothing,fw_hca,fw_uniform,dEOpp_r,0.0133,-0.0308,0.0293,0.7013
+H3-ctx,HCA changes gender EOpp gap relative to uniform smoothing,fw_hca,fw_uniform,dDP_r,0.0179,-0.0191,0.0289,0.5155
+H3-ctx,HCA changes gender EOpp gap relative to uniform smoothing,fw_hca,fw_uniform,dEOdds_r,0.0221,-0.0224,0.0352,0.5415
+H3-ctx,HCA changes gender EOpp gap relative to uniform smoothing,fw_hca,fw_uniform,macro_f1,-0.0091,-0.018,-0.0028,0.002
+H3-ctx,HCA changes gender EOpp gap relative to uniform smoothing,fw_hca,fw_uniform,balanced_acc,-0.0086,-0.0166,-0.0024,0.002
+H3-ctx,HCA changes gender EOpp gap relative to uniform smoothing,fw_hca,fw_uniform,brier,0.0005,-0.0005,0.0014,0.2737
+H3-ctx,HCA changes gender EOpp gap relative to uniform smoothing,fw_hca,fw_uniform,log_loss,0.0004,-0.002,0.0025,0.7313
+H4-ctx,HCA differs from global-scalar attenuation at the same tuning budget,fw_hca,fw_global,dEOpp_g,0.0001,-0.0366,0.0232,0.8112
+H4-ctx,HCA differs from global-scalar attenuation at the same tuning budget,fw_hca,fw_global,dDP_g,0.0038,-0.0169,0.0264,0.6533
+H4-ctx,HCA differs from global-scalar attenuation at the same tuning budget,fw_hca,fw_global,dEOdds_g,-0.0061,-0.0332,0.0273,0.953
+H4-ctx,HCA differs from global-scalar attenuation at the same tuning budget,fw_hca,fw_global,dEOpp_r,-0.0037,-0.0379,0.0167,0.6134
+H4-ctx,HCA differs from global-scalar attenuation at the same tuning budget,fw_hca,fw_global,dDP_r,0.014,-0.0285,0.0261,0.4675
+H4-ctx,HCA differs from global-scalar attenuation at the same tuning budget,fw_hca,fw_global,dEOdds_r,0.0073,-0.0357,0.0416,0.9151
+H4-ctx,HCA differs from global-scalar attenuation at the same tuning budget,fw_hca,fw_global,macro_f1,-0.0003,-0.0114,0.0083,0.9471
+H4-ctx,HCA differs from global-scalar attenuation at the same tuning budget,fw_hca,fw_global,balanced_acc,0.0002,-0.0105,0.009,0.8911
+H4-ctx,HCA differs from global-scalar attenuation at the same tuning budget,fw_hca,fw_global,brier,-0.0017,-0.0044,0.0005,0.1219
+H4-ctx,HCA differs from global-scalar attenuation at the same tuning budget,fw_hca,fw_global,log_loss,-0.0038,-0.0105,0.002,0.2038

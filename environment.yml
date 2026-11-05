@@ -1,0 +1,8 @@
+# Conda alternative to requirements-lock.txt (tested environment: CPython 3.13.18, Linux x86_64, 4 CPU cores, 15 GB RAM, no GPU)
+name: afgml-p4
+channels: [conda-forge]
+dependencies:
+  - python=3.13
+  - pip
+  - pip:
+      - -r requirements-lock.txt

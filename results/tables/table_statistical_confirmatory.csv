@@ -1,0 +1,5 @@
+id,a,b,metric,a_mean,b_mean,estimate_mean_over_seeds,ci95_low,ci95_high,p_unadjusted,p_holm,seed_diff_min,seed_diff_max,dz_over_seeds
+H1,fw_uniform,fw_lr,dEOpp_g,0.0885,0.0869,0.0016,-0.038,0.0216,0.5934,1.0,-0.0412,0.0339,0.0437
+H2,n2v_uniform,n2v_lr,dEOpp_g,0.1027,0.1014,0.0013,-0.0281,0.0394,0.7872,1.0,-0.0239,0.0545,0.0407
+H3,fw_hca,fw_uniform,dEOpp_g,0.0922,0.0885,0.0037,-0.0202,0.0259,0.7532,1.0,-0.0107,0.0269,0.2308
+H4,fw_hca,fw_global,dEOpp_g,0.0922,0.0921,0.0001,-0.0366,0.0232,0.8112,1.0,-0.0229,0.0239,0.0037
