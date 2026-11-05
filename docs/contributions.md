@@ -1,6 +1,8 @@
 # Contributions
 
-Student names, roll numbers, commit links and individual statements must be written by the students themselves. The split below is a *proposed* allocation that balances the rubric; replace "Student 1/2" and edit freely. Commit count is not a proxy for contribution.
+**Team:** AARON (Reg. No. 261090830003) and AASHISH (Reg. No. 261090830016).
+
+The split below is a *proposed* allocation that balances the rubric. "Student 1" and "Student 2" are not yet mapped to AARON or AASHISH: replace them with the actual names once the team confirms who did what. Commit links and individual statements must be written by the students themselves. Commit count is not a proxy for contribution.
 
 | Work item | Lead student | Supporting / reviewer student | Artifact / commit | Verification (what the reviewer checked) |
 |---|---|---|---|---|
@@ -17,8 +19,8 @@ Student names, roll numbers, commit links and individual statements must be writ
 | Report, manuscript, slides, demo | Both | Both | `report/`, `manuscript/`, `slides/`, `demo/` | Each student presents the other's half in rehearsal |
 
 ## Individual statements (to be written by each student)
-* **Student 1:** one technical decision you made and why; one difficulty or failure; one cross-check you performed on Student 2's work.
-* **Student 2:** same three items.
+* **AARON (261090830003):** one technical decision you made and why; one difficulty or failure; one cross-check you performed on AASHISH's work.
+* **AASHISH (261090830016):** same three items.
 
 ## Assistance disclosure
 This repository was produced with substantial assistance from an AI coding assistant (Claude, Anthropic), which wrote code, ran experiments and drafted documents under the students' direction. Disclose this according to the course's policy, and make sure both students can explain and defend every part.

@@ -52,4 +52,4 @@ Primary fairness criterion: gender equality-of-opportunity gap ΔEOpp = |TPR(g=1
 See `docs/assumptions.md` (numbered ethical items 1–10). In short: historical biases in the source network; recorded gender is not gender identity; region has a different normative status; subgraph fairness does not generalise; graph structure leaks region almost perfectly; attenuation itself changes whose neighbours count; DP and EOpp conflict here; small intersectional cells; synthetic results are not causal evidence about Pokec. No identifiable records are released.
 
 ## Provenance
-Code: this repository (commit recorded in `results/manifest.csv`). Data hashes: `data/raw/PROVENANCE.json`. Authors: [Student 1 name, roll number], [Student 2 name, roll number] — to be filled in by the students.
+Code: this repository (commit recorded in `results/manifest.csv`). Data hashes: `data/raw/PROVENANCE.json`. Authors: AARON (Reg. No. 261090830003), AASHISH (Reg. No. 261090830016).

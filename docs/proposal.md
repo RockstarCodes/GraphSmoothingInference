@@ -1,7 +1,7 @@
 # Research proposal — ICT 5143 AFGML Capstone, Problem 4
 
 **Provisional title:** Does Graph Smoothing Reintroduce Bias into Fair Node Embeddings?
-**Team:** `[Student 1 name, roll number]`, `[Student 2 name, roll number]` (to be supplied by the students)
+**Team:** AARON (Reg. No. 261090830003), AASHISH (Reg. No. 261090830016)
 **Domain:** offline audit of demographic disparities in social-network node classification. Not a recruitment, employment or individual decision system.
 
 ## Decision variables

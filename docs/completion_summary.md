@@ -78,7 +78,7 @@ python scripts/make_results.py --config configs/evaluation.yaml && python script
 Report: 3 pages, compiled twice with pdflatex, no errors or overfull boxes, inspected. Manuscript: 10 pages (main text to p. 9), compiled, inspected, two overfull boxes under 18 pt. Slides: 14 frames (11 + 3 backup) from the course template, compiled, inspected.
 
 ## 18. Remaining tasks requiring student input
-1. Student names, roll numbers, team ID, evaluation date (README, LICENSE, report, manuscript, slides, model card).
+1. Team ID and evaluation date (student names and registration numbers are filled in: AARON 261090830003, AASHISH 261090830016).
 2. Create the remote repository; then the repository URL and submission commit/tag.
 3. Individual statements and the real contribution split in `docs/contributions.md`.
 4. Confirm three flagged references; record the FairGNN commit hash.

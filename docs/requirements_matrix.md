@@ -141,7 +141,7 @@ Statuses are only: **Complete**, **Partial**, **Failed**, **Missing**, **N/A** (
 
 | ID | Requirement | Location | Status |
 |---|---|---|---|
-| DOC1 | README with 18 items | `README.md` | Partial — student names, roll numbers, repository URL, contributions are placeholders |
+| DOC1 | README with 18 items | `README.md` | Partial — team ID, repository URL and the per-student contribution split are still placeholders |
 | DOC2 | Proposal | `docs/proposal.md` | Complete |
 | DOC3 | Related-work review | `docs/related_work.md` | Partial (see R1) |
 | DOC4 | Data card | `docs/data_card.md` | Complete |
@@ -158,5 +158,5 @@ Statuses are only: **Complete**, **Partial**, **Failed**, **Missing**, **N/A** (
 | DOC15 | Beamer slides ≈ 10–12 + backup | `slides/AFGML_Presentation.pdf` (11 main + 3 backup frames, from the course template) | Partial — compiled and inspected; student placeholders remain |
 | DOC16 | Demo README + saved trace | `demo/` | Complete |
 | DOC17 | Individual contribution statements | `docs/contributions.md` | Missing — must be written by each student |
-| DOC18 | All placeholders replaced | report, slides, README | Missing — student identity, team ID, repository URL, submission commit, date |
+| DOC18 | All placeholders replaced | report, slides, README | Partial — names and registration numbers filled; team ID, repository URL, submission commit, date remain |
 | DOC19 | Submission tag / evaluator access | — | Missing — no remote repository exists yet |

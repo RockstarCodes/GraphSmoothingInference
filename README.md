@@ -10,7 +10,7 @@ An exact-inference audit of pairwise Markov smoothing on top of Node2Vec and Fai
 |---|---|
 | Problem | 4 — Does Graph Smoothing Reintroduce Bias into Fair Node Embeddings? |
 | Team | [Team ID] |
-| Students | [Student 1 name, roll number]; [Student 2 name, roll number] |
+| Students | AARON (Reg. No. 261090830003); AASHISH (Reg. No. 261090830016) |
 | Repository | [repository URL] — submission commit `[commit]` |
 | Dataset | Pokec-z (FairGNN release), fixed 2,000-node core subgraph |
 | Y = 1 | the benchmark's positive working-field class: raw `I_am_working_in_field` code ≥ 1 (codes are undocumented, so Y has no occupational meaning) |
