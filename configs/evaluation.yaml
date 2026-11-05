@@ -1,0 +1,16 @@
+main_dir: results/metrics/main
+robustness_dir: results/metrics/robustness
+synthetic_dir: results/metrics/synthetic
+bootstrap:
+  replicates: 1000
+  seed: 2026
+  block_method: louvain
+  louvain_seed: 0
+  level: 0.95
+confirmatory_family:   # declared before test results were inspected (docs/protocol.md)
+  - {id: H1, a: fw_uniform, b: fw_lr,   metric: dEOpp_gender, alternative: "uniform smoothing changes gender EOpp gap of FairWalk pipeline"}
+  - {id: H2, a: n2v_uniform, b: n2v_lr, metric: dEOpp_gender, alternative: "uniform smoothing changes gender EOpp gap of Node2Vec pipeline"}
+  - {id: H3, a: fw_hca, b: fw_uniform,  metric: dEOpp_gender, alternative: "HCA changes gender EOpp gap relative to uniform smoothing"}
+  - {id: H4, a: fw_hca, b: fw_global,   metric: dEOpp_gender, alternative: "HCA differs from global-scalar attenuation at the same tuning budget"}
+figures_dir: results/figures
+tables_dir: results/tables

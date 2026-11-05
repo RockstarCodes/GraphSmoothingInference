@@ -1,0 +1,2 @@
+{"time":"2026-11-05 15:25:53,065","level":"INFO","logger":"acquire_data","msg":'region_job.csv: existing sha256=62f299e688cc07c29fa36f0d4c0f1c15137bd0fdced5931eec15e724e4bda3cd verified=True'}
+{"time":"2026-11-05 15:25:53,065","level":"INFO","logger":"acquire_data","msg":'region_job_relationship.txt: existing sha256=a34945943c13a8790439c2230bfb00e6573bb82fe781ccc30a295276b825acf8 verified=True'}

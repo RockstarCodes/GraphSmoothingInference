@@ -1,0 +1,27 @@
+# raw / processed data (redistribution governed by source terms; regenerate with scripts)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+# large intermediates
+results/metrics/**/*_embeddings.npz
+results/metrics/synthetic_smoke/
+results/smoke/
+# environments, caches, credentials
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.env
+*.key
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.toc
+*.nav
+*.snm
+*.vrb
+*.synctex.gz
+!results/logs/*.log

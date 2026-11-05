@@ -1,0 +1,24 @@
+{
+  "subgraph_nodes": 2000,
+  "subgraph_edges": 5351,
+  "root_user_id": 513797,
+  "sampling_seed": 20261105,
+  "target_size": 2000,
+  "labelled_lcc_nodes": 7659,
+  "labelled_lcc_edges": 20550,
+  "integrity": {
+    "edge_indices_valid": true,
+    "no_self_loops": true,
+    "no_duplicate_edges": true,
+    "labels_binary": true,
+    "gender_binary": true,
+    "features_finite": true,
+    "feature_rows_match": true
+  },
+  "subgraph_positive_rate": 0.482,
+  "population_positive_rate": 0.5357630091600077,
+  "subgraph_gender1_share": 0.5145,
+  "population_gender1_share": 0.5018514909374391,
+  "subgraph_region1_share": 0.415,
+  "population_region1_share": 0.35519391931397387
+}

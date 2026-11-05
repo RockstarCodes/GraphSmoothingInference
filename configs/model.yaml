@@ -1,0 +1,22 @@
+# Conditional Markov network + inference
+unary:
+  clip_eps: 1.0e-6             # probabilities clipped to [eps, 1-eps]
+  crossfit_folds: 5            # cross-fitted unaries for training nodes when fitting lambda
+pairwise:
+  form: "exp(lambda_ij * 1[y_i == y_j])"
+  lambda_grid: [0.0, 0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0]
+  lambda_fit: training_fold_log_likelihood   # K-fold over training nodes, held-out fold unobserved
+inference:
+  method: exact_sum_product
+  forest_method: max_jaccard
+  forest_seed: 0
+  verification_tolerance: 1.0e-8
+attenuation:
+  rule: "lambda_ij = lambda * (1 - eta * 1[A_i == A_j])"
+  attribute: gender
+  eta_grid: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+  global_scale_grid: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]   # ablation B, same budget
+verification:
+  n_random_fixtures: 200
+  max_nodes: 12
+  seed: 0

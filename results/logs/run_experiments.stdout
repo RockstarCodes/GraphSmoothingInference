@@ -1,0 +1,456 @@
+INFO gensim.models.word2vec: collecting all words and their counts
+INFO gensim.models.word2vec: PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+INFO gensim.models.word2vec: PROGRESS: at sentence #10000, processed 400000 words, keeping 2000 word types
+INFO gensim.models.word2vec: collected 2000 word types from a corpus of 800000 raw words and 20000 sentences
+INFO gensim.models.word2vec: Creating a fresh vocabulary
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 retains 2000 unique words (100.00% of original 2000, drops 0)', 'datetime': '2026-11-05T15:33:34.386031', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 leaves 800000 word corpus (100.00% of original 800000, drops 0)', 'datetime': '2026-11-05T15:33:34.388031', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: deleting the raw counts dictionary of 2000 items
+INFO gensim.models.word2vec: sample=0.001 downsamples 6 most-common words
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'downsampling leaves estimated 798373.6584512373 word corpus (99.8%% of prior 800000)', 'datetime': '2026-11-05T15:33:34.391317', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: estimated required memory for 2000 words and 64 dimensions: 2024000 bytes
+INFO gensim.models.word2vec: resetting layer weights
+INFO gensim.utils: Word2Vec lifecycle event {'update': False, 'trim_rule': 'None', 'datetime': '2026-11-05T15:33:34.398807', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'build_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training model with 1 workers on 2000 vocabulary and 64 features, using sg=1 hs=0 sample=0.001 negative=5 window=5 shrink_windows=True', 'datetime': '2026-11-05T15:33:34.398968', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.models.word2vec: collecting all words and their counts
+INFO gensim.models.word2vec: PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+INFO gensim.models.word2vec: collecting all words and their counts
+INFO gensim.models.word2vec: PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+INFO gensim.models.word2vec: collecting all words and their counts
+INFO gensim.models.word2vec: PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+INFO gensim.models.word2vec: PROGRESS: at sentence #10000, processed 400000 words, keeping 2000 word types
+INFO gensim.models.word2vec: PROGRESS: at sentence #10000, processed 400000 words, keeping 2000 word types
+INFO gensim.models.word2vec: PROGRESS: at sentence #10000, processed 400000 words, keeping 2000 word types
+INFO gensim.models.word2vec: collected 2000 word types from a corpus of 800000 raw words and 20000 sentences
+INFO gensim.models.word2vec: Creating a fresh vocabulary
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 retains 2000 unique words (100.00% of original 2000, drops 0)', 'datetime': '2026-11-05T15:33:34.547784', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 leaves 800000 word corpus (100.00% of original 800000, drops 0)', 'datetime': '2026-11-05T15:33:34.550173', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: deleting the raw counts dictionary of 2000 items
+INFO gensim.models.word2vec: sample=0.001 downsamples 5 most-common words
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'downsampling leaves estimated 798587.3660259419 word corpus (99.8%% of prior 800000)', 'datetime': '2026-11-05T15:33:34.553503', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: collected 2000 word types from a corpus of 800000 raw words and 20000 sentences
+INFO gensim.models.word2vec: Creating a fresh vocabulary
+INFO gensim.models.word2vec: collected 2000 word types from a corpus of 800000 raw words and 20000 sentences
+INFO gensim.models.word2vec: Creating a fresh vocabulary
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 retains 2000 unique words (100.00% of original 2000, drops 0)', 'datetime': '2026-11-05T15:33:34.558413', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 leaves 800000 word corpus (100.00% of original 800000, drops 0)', 'datetime': '2026-11-05T15:33:34.560140', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 retains 2000 unique words (100.00% of original 2000, drops 0)', 'datetime': '2026-11-05T15:33:34.558575', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 leaves 800000 word corpus (100.00% of original 800000, drops 0)', 'datetime': '2026-11-05T15:33:34.560642', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: estimated required memory for 2000 words and 64 dimensions: 2024000 bytes
+INFO gensim.models.word2vec: resetting layer weights
+INFO gensim.utils: Word2Vec lifecycle event {'update': False, 'trim_rule': 'None', 'datetime': '2026-11-05T15:33:34.561493', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'build_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training model with 1 workers on 2000 vocabulary and 64 features, using sg=1 hs=0 sample=0.001 negative=5 window=5 shrink_windows=True', 'datetime': '2026-11-05T15:33:34.561623', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.models.word2vec: deleting the raw counts dictionary of 2000 items
+INFO gensim.models.word2vec: sample=0.001 downsamples 6 most-common words
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'downsampling leaves estimated 798604.5941782035 word corpus (99.8%% of prior 800000)', 'datetime': '2026-11-05T15:33:34.563462', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: deleting the raw counts dictionary of 2000 items
+INFO gensim.models.word2vec: sample=0.001 downsamples 6 most-common words
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'downsampling leaves estimated 798646.6008536387 word corpus (99.8%% of prior 800000)', 'datetime': '2026-11-05T15:33:34.563778', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: estimated required memory for 2000 words and 64 dimensions: 2024000 bytes
+INFO gensim.models.word2vec: resetting layer weights
+INFO gensim.models.word2vec: estimated required memory for 2000 words and 64 dimensions: 2024000 bytes
+INFO gensim.models.word2vec: resetting layer weights
+INFO gensim.utils: Word2Vec lifecycle event {'update': False, 'trim_rule': 'None', 'datetime': '2026-11-05T15:33:34.571172', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'build_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training model with 1 workers on 2000 vocabulary and 64 features, using sg=1 hs=0 sample=0.001 negative=5 window=5 shrink_windows=True', 'datetime': '2026-11-05T15:33:34.571291', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.utils: Word2Vec lifecycle event {'update': False, 'trim_rule': 'None', 'datetime': '2026-11-05T15:33:34.571803', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'build_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training model with 1 workers on 2000 vocabulary and 64 features, using sg=1 hs=0 sample=0.001 negative=5 window=5 shrink_windows=True', 'datetime': '2026-11-05T15:33:34.572306', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 48.75% examples, 388890 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 50.00% examples, 394151 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 48.75% examples, 387708 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 50.00% examples, 388088 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 96.25% examples, 380012 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0: training on 800000 raw words (798435 effective words) took 2.1s, 379707 effective words/s
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 92.50% examples, 367010 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 96.25% examples, 377410 words/s, in_qsize 2, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 97.50% examples, 379261 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0: training on 800000 raw words (798660 effective words) took 2.1s, 379074 effective words/s
+INFO gensim.models.word2vec: EPOCH 0: training on 800000 raw words (798557 effective words) took 2.1s, 377439 effective words/s
+INFO gensim.models.word2vec: EPOCH 0: training on 800000 raw words (798638 effective words) took 2.2s, 367432 effective words/s
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 46.25% examples, 360343 words/s, in_qsize 2, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 45.00% examples, 354443 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 47.50% examples, 372151 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 41.25% examples, 324982 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 91.25% examples, 358580 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 93.75% examples, 367625 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 95.00% examples, 373389 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1: training on 800000 raw words (798388 effective words) took 2.2s, 360501 effective words/s
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 88.75% examples, 347535 words/s, in_qsize 2, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1: training on 800000 raw words (798625 effective words) took 2.1s, 373725 effective words/s
+INFO gensim.models.word2vec: EPOCH 1: training on 800000 raw words (798629 effective words) took 2.2s, 368257 effective words/s
+INFO gensim.models.word2vec: EPOCH 1: training on 800000 raw words (798576 effective words) took 2.3s, 351073 effective words/s
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 46.25% examples, 367976 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 46.25% examples, 367655 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 47.50% examples, 370999 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 46.25% examples, 361687 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 92.50% examples, 367203 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 93.75% examples, 371744 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 93.75% examples, 368490 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2: training on 800000 raw words (798368 effective words) took 2.2s, 367711 effective words/s
+INFO gensim.models.word2vec: EPOCH 2: training on 800000 raw words (798603 effective words) took 2.2s, 371135 effective words/s
+INFO gensim.models.word2vec: EPOCH 2: training on 800000 raw words (798651 effective words) took 2.2s, 368502 effective words/s
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 92.50% examples, 363238 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2: training on 800000 raw words (798628 effective words) took 2.2s, 364039 effective words/s
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 46.25% examples, 365614 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 46.25% examples, 362038 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 46.25% examples, 366416 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 47.50% examples, 373844 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 93.75% examples, 371264 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 91.25% examples, 357992 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 92.50% examples, 366331 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3: training on 800000 raw words (798426 effective words) took 2.1s, 371698 effective words/s
+INFO gensim.models.word2vec: EPOCH 3: training on 800000 raw words (798626 effective words) took 2.2s, 367320 effective words/s
+INFO gensim.models.word2vec: EPOCH 3: training on 800000 raw words (798587 effective words) took 2.2s, 358004 effective words/s
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 95.00% examples, 372788 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3: training on 800000 raw words (798558 effective words) took 2.1s, 373201 effective words/s
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 47.50% examples, 369538 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 45.00% examples, 353621 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 45.00% examples, 355064 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 45.00% examples, 356556 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 92.50% examples, 361328 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 88.75% examples, 351457 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 91.25% examples, 358366 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4: training on 800000 raw words (798415 effective words) took 2.2s, 362704 effective words/s
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training on 4000000 raw words (3992032 effective words) took 10.9s, 367925 effective words/s', 'datetime': '2026-11-05T15:33:45.249180', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.utils: Word2Vec lifecycle event {'params': 'Word2Vec<vocab=2000, vector_size=64, alpha=0.025>', 'datetime': '2026-11-05T15:33:45.249287', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'created'}
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 90.00% examples, 357255 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4: training on 800000 raw words (798549 effective words) took 2.2s, 359895 effective words/s
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training on 4000000 raw words (3992921 effective words) took 10.9s, 367364 effective words/s', 'datetime': '2026-11-05T15:33:45.430817', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.utils: Word2Vec lifecycle event {'params': 'Word2Vec<vocab=2000, vector_size=64, alpha=0.025>', 'datetime': '2026-11-05T15:33:45.430915', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'created'}
+INFO gensim.models.word2vec: EPOCH 4: training on 800000 raw words (798667 effective words) took 2.3s, 352797 effective words/s
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training on 4000000 raw words (3993233 effective words) took 10.9s, 366612 effective words/s', 'datetime': '2026-11-05T15:33:45.463624', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.utils: Word2Vec lifecycle event {'params': 'Word2Vec<vocab=2000, vector_size=64, alpha=0.025>', 'datetime': '2026-11-05T15:33:45.463720', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'created'}
+INFO gensim.models.word2vec: EPOCH 4: training on 800000 raw words (798642 effective words) took 2.2s, 359126 effective words/s
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training on 4000000 raw words (3993042 effective words) took 11.0s, 362237 effective words/s', 'datetime': '2026-11-05T15:33:45.595688', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.utils: Word2Vec lifecycle event {'params': 'Word2Vec<vocab=2000, vector_size=64, alpha=0.025>', 'datetime': '2026-11-05T15:33:45.595788', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'created'}
+INFO gensim.models.word2vec: collecting all words and their counts
+INFO gensim.models.word2vec: PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+INFO gensim.models.word2vec: PROGRESS: at sentence #10000, processed 400000 words, keeping 2000 word types
+INFO gensim.models.word2vec: collected 2000 word types from a corpus of 800000 raw words and 20000 sentences
+INFO gensim.models.word2vec: Creating a fresh vocabulary
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 retains 2000 unique words (100.00% of original 2000, drops 0)', 'datetime': '2026-11-05T15:33:56.513890', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 leaves 800000 word corpus (100.00% of original 800000, drops 0)', 'datetime': '2026-11-05T15:33:56.514006', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: deleting the raw counts dictionary of 2000 items
+INFO gensim.models.word2vec: sample=0.001 downsamples 8 most-common words
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'downsampling leaves estimated 798709.5982157716 word corpus (99.8%% of prior 800000)', 'datetime': '2026-11-05T15:33:56.516978', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: estimated required memory for 2000 words and 64 dimensions: 2024000 bytes
+INFO gensim.models.word2vec: resetting layer weights
+INFO gensim.utils: Word2Vec lifecycle event {'update': False, 'trim_rule': 'None', 'datetime': '2026-11-05T15:33:56.524156', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'build_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training model with 1 workers on 2000 vocabulary and 64 features, using sg=1 hs=0 sample=0.001 negative=5 window=5 shrink_windows=True', 'datetime': '2026-11-05T15:33:56.524275', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.models.word2vec: collecting all words and their counts
+INFO gensim.models.word2vec: PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+INFO gensim.models.word2vec: PROGRESS: at sentence #10000, processed 400000 words, keeping 2000 word types
+INFO gensim.models.word2vec: collected 2000 word types from a corpus of 800000 raw words and 20000 sentences
+INFO gensim.models.word2vec: Creating a fresh vocabulary
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 retains 2000 unique words (100.00% of original 2000, drops 0)', 'datetime': '2026-11-05T15:33:56.791301', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 leaves 800000 word corpus (100.00% of original 800000, drops 0)', 'datetime': '2026-11-05T15:33:56.791490', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: deleting the raw counts dictionary of 2000 items
+INFO gensim.models.word2vec: sample=0.001 downsamples 7 most-common words
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'downsampling leaves estimated 798907.252180976 word corpus (99.9%% of prior 800000)', 'datetime': '2026-11-05T15:33:56.794453', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: estimated required memory for 2000 words and 64 dimensions: 2024000 bytes
+INFO gensim.models.word2vec: resetting layer weights
+INFO gensim.utils: Word2Vec lifecycle event {'update': False, 'trim_rule': 'None', 'datetime': '2026-11-05T15:33:56.801864', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'build_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training model with 1 workers on 2000 vocabulary and 64 features, using sg=1 hs=0 sample=0.001 negative=5 window=5 shrink_windows=True', 'datetime': '2026-11-05T15:33:56.802002', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.models.word2vec: collecting all words and their counts
+INFO gensim.models.word2vec: PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+INFO gensim.models.word2vec: collecting all words and their counts
+INFO gensim.models.word2vec: PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+INFO gensim.models.word2vec: PROGRESS: at sentence #10000, processed 400000 words, keeping 2000 word types
+INFO gensim.models.word2vec: PROGRESS: at sentence #10000, processed 400000 words, keeping 2000 word types
+INFO gensim.models.word2vec: collected 2000 word types from a corpus of 800000 raw words and 20000 sentences
+INFO gensim.models.word2vec: Creating a fresh vocabulary
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 retains 2000 unique words (100.00% of original 2000, drops 0)', 'datetime': '2026-11-05T15:33:56.971715', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 leaves 800000 word corpus (100.00% of original 800000, drops 0)', 'datetime': '2026-11-05T15:33:56.971855', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: deleting the raw counts dictionary of 2000 items
+INFO gensim.models.word2vec: sample=0.001 downsamples 8 most-common words
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'downsampling leaves estimated 798841.5826420182 word corpus (99.9%% of prior 800000)', 'datetime': '2026-11-05T15:33:56.974880', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: estimated required memory for 2000 words and 64 dimensions: 2024000 bytes
+INFO gensim.models.word2vec: resetting layer weights
+INFO gensim.utils: Word2Vec lifecycle event {'update': False, 'trim_rule': 'None', 'datetime': '2026-11-05T15:33:56.982062', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'build_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training model with 1 workers on 2000 vocabulary and 64 features, using sg=1 hs=0 sample=0.001 negative=5 window=5 shrink_windows=True', 'datetime': '2026-11-05T15:33:56.982185', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.models.word2vec: collected 2000 word types from a corpus of 800000 raw words and 20000 sentences
+INFO gensim.models.word2vec: Creating a fresh vocabulary
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 retains 2000 unique words (100.00% of original 2000, drops 0)', 'datetime': '2026-11-05T15:33:56.994004', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 leaves 800000 word corpus (100.00% of original 800000, drops 0)', 'datetime': '2026-11-05T15:33:56.994177', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: deleting the raw counts dictionary of 2000 items
+INFO gensim.models.word2vec: sample=0.001 downsamples 7 most-common words
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'downsampling leaves estimated 798648.7309620179 word corpus (99.8%% of prior 800000)', 'datetime': '2026-11-05T15:33:56.997270', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: estimated required memory for 2000 words and 64 dimensions: 2024000 bytes
+INFO gensim.models.word2vec: resetting layer weights
+INFO gensim.utils: Word2Vec lifecycle event {'update': False, 'trim_rule': 'None', 'datetime': '2026-11-05T15:33:57.004807', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'build_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training model with 1 workers on 2000 vocabulary and 64 features, using sg=1 hs=0 sample=0.001 negative=5 window=5 shrink_windows=True', 'datetime': '2026-11-05T15:33:57.004932', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 50.00% examples, 392333 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 45.00% examples, 353761 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 50.00% examples, 396538 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 50.00% examples, 390983 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 98.75% examples, 388318 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0: training on 800000 raw words (798657 effective words) took 2.1s, 388386 effective words/s
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 93.75% examples, 368605 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0: training on 800000 raw words (798889 effective words) took 2.2s, 369567 effective words/s
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 98.75% examples, 389156 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 97.50% examples, 384730 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0: training on 800000 raw words (798820 effective words) took 2.1s, 389188 effective words/s
+INFO gensim.models.word2vec: EPOCH 0: training on 800000 raw words (798626 effective words) took 2.1s, 384633 effective words/s
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 47.50% examples, 378769 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 47.50% examples, 373132 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 47.50% examples, 376097 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 47.50% examples, 376775 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 96.25% examples, 380727 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1: training on 800000 raw words (798720 effective words) took 2.1s, 380890 effective words/s
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 95.00% examples, 374431 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 95.00% examples, 373779 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1: training on 800000 raw words (798886 effective words) took 2.1s, 374872 effective words/s
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 93.75% examples, 371779 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1: training on 800000 raw words (798858 effective words) took 2.1s, 373502 effective words/s
+INFO gensim.models.word2vec: EPOCH 1: training on 800000 raw words (798630 effective words) took 2.1s, 371766 effective words/s
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 47.50% examples, 375484 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 46.25% examples, 367751 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 47.50% examples, 369703 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 47.50% examples, 370703 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 93.75% examples, 371026 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2: training on 800000 raw words (798679 effective words) took 2.1s, 371620 effective words/s
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 91.25% examples, 359540 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 90.00% examples, 352521 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 92.50% examples, 362746 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2: training on 800000 raw words (798932 effective words) took 2.2s, 360228 effective words/s
+INFO gensim.models.word2vec: EPOCH 2: training on 800000 raw words (798874 effective words) took 2.2s, 355948 effective words/s
+INFO gensim.models.word2vec: EPOCH 2: training on 800000 raw words (798688 effective words) took 2.2s, 363266 effective words/s
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 43.75% examples, 345882 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 46.25% examples, 367059 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 46.25% examples, 369390 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 46.25% examples, 361772 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 88.75% examples, 350215 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3: training on 800000 raw words (798726 effective words) took 2.3s, 352911 effective words/s
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 92.50% examples, 363269 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 91.25% examples, 364280 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 90.00% examples, 354288 words/s, in_qsize 2, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3: training on 800000 raw words (798906 effective words) took 2.2s, 361949 effective words/s
+INFO gensim.models.word2vec: EPOCH 3: training on 800000 raw words (798851 effective words) took 2.2s, 359764 effective words/s
+INFO gensim.models.word2vec: EPOCH 3: training on 800000 raw words (798698 effective words) took 2.3s, 351722 effective words/s
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 47.50% examples, 370638 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 43.75% examples, 341161 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 43.75% examples, 347748 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 47.50% examples, 370481 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 93.75% examples, 367903 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4: training on 800000 raw words (798660 effective words) took 2.2s, 368658 effective words/s
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training on 4000000 raw words (3993442 effective words) took 10.8s, 371361 effective words/s', 'datetime': '2026-11-05T15:34:07.277889', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.utils: Word2Vec lifecycle event {'params': 'Word2Vec<vocab=2000, vector_size=64, alpha=0.025>', 'datetime': '2026-11-05T15:34:07.277994', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'created'}
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 87.50% examples, 345137 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 91.25% examples, 359379 words/s, in_qsize 2, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 95.00% examples, 374523 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4: training on 800000 raw words (798912 effective words) took 2.3s, 348277 effective words/s
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training on 4000000 raw words (3994525 effective words) took 11.0s, 362480 effective words/s', 'datetime': '2026-11-05T15:34:07.822055', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.utils: Word2Vec lifecycle event {'params': 'Word2Vec<vocab=2000, vector_size=64, alpha=0.025>', 'datetime': '2026-11-05T15:34:07.822164', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'created'}
+INFO gensim.models.word2vec: EPOCH 4: training on 800000 raw words (798705 effective words) took 2.1s, 373426 effective words/s
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training on 4000000 raw words (3993347 effective words) took 10.8s, 368214 effective words/s', 'datetime': '2026-11-05T15:34:07.850186', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.utils: Word2Vec lifecycle event {'params': 'Word2Vec<vocab=2000, vector_size=64, alpha=0.025>', 'datetime': '2026-11-05T15:34:07.850294', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'created'}
+INFO gensim.models.word2vec: EPOCH 4: training on 800000 raw words (798888 effective words) took 2.2s, 360966 effective words/s
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training on 4000000 raw words (3994291 effective words) took 10.9s, 367088 effective words/s', 'datetime': '2026-11-05T15:34:07.863280', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.utils: Word2Vec lifecycle event {'params': 'Word2Vec<vocab=2000, vector_size=64, alpha=0.025>', 'datetime': '2026-11-05T15:34:07.863386', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'created'}
+INFO gensim.models.word2vec: collecting all words and their counts
+INFO gensim.models.word2vec: PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+INFO gensim.models.word2vec: PROGRESS: at sentence #10000, processed 400000 words, keeping 2000 word types
+INFO gensim.models.word2vec: collected 2000 word types from a corpus of 800000 raw words and 20000 sentences
+INFO gensim.models.word2vec: Creating a fresh vocabulary
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 retains 2000 unique words (100.00% of original 2000, drops 0)', 'datetime': '2026-11-05T15:34:17.797168', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 leaves 800000 word corpus (100.00% of original 800000, drops 0)', 'datetime': '2026-11-05T15:34:17.797316', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: deleting the raw counts dictionary of 2000 items
+INFO gensim.models.word2vec: sample=0.001 downsamples 16 most-common words
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'downsampling leaves estimated 792524.5584303157 word corpus (99.1%% of prior 800000)', 'datetime': '2026-11-05T15:34:17.800763', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: estimated required memory for 2000 words and 64 dimensions: 2024000 bytes
+INFO gensim.models.word2vec: resetting layer weights
+INFO gensim.utils: Word2Vec lifecycle event {'update': False, 'trim_rule': 'None', 'datetime': '2026-11-05T15:34:17.808742', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'build_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training model with 1 workers on 2000 vocabulary and 64 features, using sg=1 hs=0 sample=0.001 negative=5 window=5 shrink_windows=True', 'datetime': '2026-11-05T15:34:17.808948', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.models.word2vec: collecting all words and their counts
+INFO gensim.models.word2vec: PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+INFO gensim.models.word2vec: PROGRESS: at sentence #10000, processed 400000 words, keeping 2000 word types
+INFO gensim.models.word2vec: collected 2000 word types from a corpus of 800000 raw words and 20000 sentences
+INFO gensim.models.word2vec: Creating a fresh vocabulary
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 retains 2000 unique words (100.00% of original 2000, drops 0)', 'datetime': '2026-11-05T15:34:18.324515', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 leaves 800000 word corpus (100.00% of original 800000, drops 0)', 'datetime': '2026-11-05T15:34:18.324700', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: deleting the raw counts dictionary of 2000 items
+INFO gensim.models.word2vec: sample=0.001 downsamples 16 most-common words
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'downsampling leaves estimated 792924.1955935541 word corpus (99.1%% of prior 800000)', 'datetime': '2026-11-05T15:34:18.327634', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: estimated required memory for 2000 words and 64 dimensions: 2024000 bytes
+INFO gensim.models.word2vec: resetting layer weights
+INFO gensim.utils: Word2Vec lifecycle event {'update': False, 'trim_rule': 'None', 'datetime': '2026-11-05T15:34:18.335002', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'build_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training model with 1 workers on 2000 vocabulary and 64 features, using sg=1 hs=0 sample=0.001 negative=5 window=5 shrink_windows=True', 'datetime': '2026-11-05T15:34:18.335121', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.models.word2vec: collecting all words and their counts
+INFO gensim.models.word2vec: PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+INFO gensim.models.word2vec: PROGRESS: at sentence #10000, processed 400000 words, keeping 2000 word types
+INFO gensim.models.word2vec: collected 2000 word types from a corpus of 800000 raw words and 20000 sentences
+INFO gensim.models.word2vec: Creating a fresh vocabulary
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 retains 2000 unique words (100.00% of original 2000, drops 0)', 'datetime': '2026-11-05T15:34:18.407431', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 leaves 800000 word corpus (100.00% of original 800000, drops 0)', 'datetime': '2026-11-05T15:34:18.407610', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: deleting the raw counts dictionary of 2000 items
+INFO gensim.models.word2vec: sample=0.001 downsamples 16 most-common words
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'downsampling leaves estimated 792386.2017781757 word corpus (99.0%% of prior 800000)', 'datetime': '2026-11-05T15:34:18.410605', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: estimated required memory for 2000 words and 64 dimensions: 2024000 bytes
+INFO gensim.models.word2vec: resetting layer weights
+INFO gensim.utils: Word2Vec lifecycle event {'update': False, 'trim_rule': 'None', 'datetime': '2026-11-05T15:34:18.417727', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'build_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training model with 1 workers on 2000 vocabulary and 64 features, using sg=1 hs=0 sample=0.001 negative=5 window=5 shrink_windows=True', 'datetime': '2026-11-05T15:34:18.417845', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.models.word2vec: collecting all words and their counts
+INFO gensim.models.word2vec: PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+INFO gensim.models.word2vec: PROGRESS: at sentence #10000, processed 400000 words, keeping 2000 word types
+INFO gensim.models.word2vec: collected 2000 word types from a corpus of 800000 raw words and 20000 sentences
+INFO gensim.models.word2vec: Creating a fresh vocabulary
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 retains 2000 unique words (100.00% of original 2000, drops 0)', 'datetime': '2026-11-05T15:34:18.477207', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 leaves 800000 word corpus (100.00% of original 800000, drops 0)', 'datetime': '2026-11-05T15:34:18.477326', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: deleting the raw counts dictionary of 2000 items
+INFO gensim.models.word2vec: sample=0.001 downsamples 15 most-common words
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'downsampling leaves estimated 792709.4053453787 word corpus (99.1%% of prior 800000)', 'datetime': '2026-11-05T15:34:18.480392', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: estimated required memory for 2000 words and 64 dimensions: 2024000 bytes
+INFO gensim.models.word2vec: resetting layer weights
+INFO gensim.utils: Word2Vec lifecycle event {'update': False, 'trim_rule': 'None', 'datetime': '2026-11-05T15:34:18.487501', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'build_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training model with 1 workers on 2000 vocabulary and 64 features, using sg=1 hs=0 sample=0.001 negative=5 window=5 shrink_windows=True', 'datetime': '2026-11-05T15:34:18.487640', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 50.00% examples, 392941 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 50.00% examples, 390650 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 50.00% examples, 392527 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 48.75% examples, 381257 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 98.75% examples, 385138 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0: training on 800000 raw words (792471 effective words) took 2.1s, 385361 effective words/s
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 100.00% examples, 390632 words/s, in_qsize 0, out_qsize 1
+INFO gensim.models.word2vec: EPOCH 0: training on 800000 raw words (792923 effective words) took 2.0s, 390591 effective words/s
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 100.00% examples, 389713 words/s, in_qsize 0, out_qsize 1
+INFO gensim.models.word2vec: EPOCH 0: training on 800000 raw words (792323 effective words) took 2.0s, 389673 effective words/s
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 98.75% examples, 382443 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0: training on 800000 raw words (792612 effective words) took 2.1s, 381983 effective words/s
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 46.25% examples, 360743 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 48.75% examples, 380802 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 48.75% examples, 378962 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 46.25% examples, 363319 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 95.00% examples, 372769 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1: training on 800000 raw words (792501 effective words) took 2.1s, 373760 effective words/s
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 97.50% examples, 383311 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1: training on 800000 raw words (792898 effective words) took 2.1s, 383620 effective words/s
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 95.00% examples, 370715 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 95.00% examples, 372968 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1: training on 800000 raw words (792361 effective words) took 2.1s, 369274 effective words/s
+INFO gensim.models.word2vec: EPOCH 1: training on 800000 raw words (792749 effective words) took 2.1s, 373532 effective words/s
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 48.75% examples, 379775 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 47.50% examples, 370367 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 47.50% examples, 368282 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 47.50% examples, 376076 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 96.25% examples, 377384 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2: training on 800000 raw words (792544 effective words) took 2.1s, 376688 effective words/s
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 95.00% examples, 373186 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2: training on 800000 raw words (792993 effective words) took 2.1s, 373573 effective words/s
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 93.75% examples, 366980 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 92.50% examples, 364461 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2: training on 800000 raw words (792473 effective words) took 2.2s, 365219 effective words/s
+INFO gensim.models.word2vec: EPOCH 2: training on 800000 raw words (792596 effective words) took 2.2s, 365969 effective words/s
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 43.75% examples, 346069 words/s, in_qsize 2, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 46.25% examples, 362694 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 47.50% examples, 369895 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 47.50% examples, 369585 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 88.75% examples, 349649 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3: training on 800000 raw words (792523 effective words) took 2.3s, 352059 effective words/s
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 96.25% examples, 376200 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3: training on 800000 raw words (792842 effective words) took 2.1s, 376691 effective words/s
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 95.00% examples, 370930 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 95.00% examples, 369836 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3: training on 800000 raw words (792293 effective words) took 2.1s, 371376 effective words/s
+INFO gensim.models.word2vec: EPOCH 3: training on 800000 raw words (792617 effective words) took 2.1s, 370676 effective words/s
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 46.25% examples, 361049 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 50.00% examples, 390497 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 48.75% examples, 382923 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 50.00% examples, 389636 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 93.75% examples, 365710 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4: training on 800000 raw words (792574 effective words) took 2.2s, 366925 effective words/s
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training on 4000000 raw words (3962613 effective words) took 10.7s, 370098 effective words/s', 'datetime': '2026-11-05T15:34:28.515963', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.utils: Word2Vec lifecycle event {'params': 'Word2Vec<vocab=2000, vector_size=64, alpha=0.025>', 'datetime': '2026-11-05T15:34:28.516074', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'created'}
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 96.25% examples, 369124 words/s, in_qsize 2, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4: training on 800000 raw words (792949 effective words) took 2.2s, 358538 effective words/s
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training on 4000000 raw words (3964605 effective words) took 10.5s, 375856 effective words/s', 'datetime': '2026-11-05T15:34:28.883441', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.utils: Word2Vec lifecycle event {'params': 'Word2Vec<vocab=2000, vector_size=64, alpha=0.025>', 'datetime': '2026-11-05T15:34:28.883535', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'created'}
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 90.00% examples, 354275 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 91.25% examples, 352219 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4: training on 800000 raw words (792334 effective words) took 2.4s, 324329 effective words/s
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training on 4000000 raw words (3961784 effective words) took 10.9s, 362242 effective words/s', 'datetime': '2026-11-05T15:34:29.354768', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.utils: Word2Vec lifecycle event {'params': 'Word2Vec<vocab=2000, vector_size=64, alpha=0.025>', 'datetime': '2026-11-05T15:34:29.354874', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'created'}
+INFO gensim.models.word2vec: EPOCH 4: training on 800000 raw words (792757 effective words) took 2.6s, 307848 effective words/s
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training on 4000000 raw words (3963331 effective words) took 11.1s, 357333 effective words/s', 'datetime': '2026-11-05T15:34:29.579118', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.utils: Word2Vec lifecycle event {'params': 'Word2Vec<vocab=2000, vector_size=64, alpha=0.025>', 'datetime': '2026-11-05T15:34:29.579251', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'created'}
+INFO gensim.models.word2vec: collecting all words and their counts
+INFO gensim.models.word2vec: PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+INFO gensim.models.word2vec: PROGRESS: at sentence #10000, processed 400000 words, keeping 2000 word types
+INFO gensim.models.word2vec: collected 2000 word types from a corpus of 800000 raw words and 20000 sentences
+INFO gensim.models.word2vec: Creating a fresh vocabulary
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 retains 2000 unique words (100.00% of original 2000, drops 0)', 'datetime': '2026-11-05T15:37:14.341296', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 leaves 800000 word corpus (100.00% of original 800000, drops 0)', 'datetime': '2026-11-05T15:37:14.341384', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: deleting the raw counts dictionary of 2000 items
+INFO gensim.models.word2vec: sample=0.001 downsamples 6 most-common words
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'downsampling leaves estimated 798633.8797274729 word corpus (99.8%% of prior 800000)', 'datetime': '2026-11-05T15:37:14.344321', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: estimated required memory for 2000 words and 64 dimensions: 2024000 bytes
+INFO gensim.models.word2vec: resetting layer weights
+INFO gensim.utils: Word2Vec lifecycle event {'update': False, 'trim_rule': 'None', 'datetime': '2026-11-05T15:37:14.351243', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'build_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training model with 1 workers on 2000 vocabulary and 64 features, using sg=1 hs=0 sample=0.001 negative=5 window=5 shrink_windows=True', 'datetime': '2026-11-05T15:37:14.351355', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 47.50% examples, 371154 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 96.25% examples, 376343 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0: training on 800000 raw words (798567 effective words) took 2.1s, 375735 effective words/s
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 48.75% examples, 380675 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 96.25% examples, 379430 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1: training on 800000 raw words (798660 effective words) took 2.1s, 379822 effective words/s
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 47.50% examples, 371467 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 96.25% examples, 376456 words/s, in_qsize 2, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2: training on 800000 raw words (798600 effective words) took 2.1s, 376776 effective words/s
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 47.50% examples, 373269 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 95.00% examples, 374184 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3: training on 800000 raw words (798624 effective words) took 2.2s, 368062 effective words/s
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 46.25% examples, 359425 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 93.75% examples, 368050 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4: training on 800000 raw words (798617 effective words) took 2.2s, 364081 effective words/s
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training on 4000000 raw words (3993068 effective words) took 10.7s, 372646 effective words/s', 'datetime': '2026-11-05T15:37:25.066873', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.utils: Word2Vec lifecycle event {'params': 'Word2Vec<vocab=2000, vector_size=64, alpha=0.025>', 'datetime': '2026-11-05T15:37:25.066961', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'created'}
+INFO gensim.models.word2vec: collecting all words and their counts
+INFO gensim.models.word2vec: PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+INFO gensim.models.word2vec: PROGRESS: at sentence #10000, processed 400000 words, keeping 2000 word types
+INFO gensim.models.word2vec: collected 2000 word types from a corpus of 800000 raw words and 20000 sentences
+INFO gensim.models.word2vec: Creating a fresh vocabulary
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 retains 2000 unique words (100.00% of original 2000, drops 0)', 'datetime': '2026-11-05T15:37:37.873350', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 leaves 800000 word corpus (100.00% of original 800000, drops 0)', 'datetime': '2026-11-05T15:37:37.873466', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: deleting the raw counts dictionary of 2000 items
+INFO gensim.models.word2vec: sample=0.001 downsamples 7 most-common words
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'downsampling leaves estimated 798874.6777339869 word corpus (99.9%% of prior 800000)', 'datetime': '2026-11-05T15:37:37.876328', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: estimated required memory for 2000 words and 64 dimensions: 2024000 bytes
+INFO gensim.models.word2vec: resetting layer weights
+INFO gensim.utils: Word2Vec lifecycle event {'update': False, 'trim_rule': 'None', 'datetime': '2026-11-05T15:37:37.883408', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'build_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training model with 1 workers on 2000 vocabulary and 64 features, using sg=1 hs=0 sample=0.001 negative=5 window=5 shrink_windows=True', 'datetime': '2026-11-05T15:37:37.883530', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 47.50% examples, 371236 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 92.50% examples, 362458 words/s, in_qsize 2, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0: training on 800000 raw words (798875 effective words) took 2.2s, 363749 effective words/s
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 46.25% examples, 358799 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 92.50% examples, 361710 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1: training on 800000 raw words (798846 effective words) took 2.2s, 361351 effective words/s
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 45.00% examples, 355968 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 91.25% examples, 358297 words/s, in_qsize 2, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2: training on 800000 raw words (798837 effective words) took 2.2s, 360670 effective words/s
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 47.50% examples, 377616 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3 - PROGRESS: at 96.25% examples, 381140 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 3: training on 800000 raw words (798878 effective words) took 2.1s, 379420 effective words/s
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 47.50% examples, 378296 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4 - PROGRESS: at 95.00% examples, 377145 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 4: training on 800000 raw words (798917 effective words) took 2.1s, 377288 effective words/s
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training on 4000000 raw words (3994353 effective words) took 10.8s, 368168 effective words/s', 'datetime': '2026-11-05T15:37:48.732850', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.utils: Word2Vec lifecycle event {'params': 'Word2Vec<vocab=2000, vector_size=64, alpha=0.025>', 'datetime': '2026-11-05T15:37:48.732948', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'created'}
+INFO gensim.models.word2vec: collecting all words and their counts
+INFO gensim.models.word2vec: PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+INFO gensim.models.word2vec: PROGRESS: at sentence #10000, processed 400000 words, keeping 2000 word types
+INFO gensim.models.word2vec: collected 2000 word types from a corpus of 800000 raw words and 20000 sentences
+INFO gensim.models.word2vec: Creating a fresh vocabulary
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 retains 2000 unique words (100.00% of original 2000, drops 0)', 'datetime': '2026-11-05T15:37:59.116832', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'effective_min_count=0 leaves 800000 word corpus (100.00% of original 800000, drops 0)', 'datetime': '2026-11-05T15:37:59.116916', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: deleting the raw counts dictionary of 2000 items
+INFO gensim.models.word2vec: sample=0.001 downsamples 15 most-common words
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'downsampling leaves estimated 792659.7042303418 word corpus (99.1%% of prior 800000)', 'datetime': '2026-11-05T15:37:59.119881', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'prepare_vocab'}
+INFO gensim.models.word2vec: estimated required memory for 2000 words and 64 dimensions: 2024000 bytes
+INFO gensim.models.word2vec: resetting layer weights
+INFO gensim.utils: Word2Vec lifecycle event {'update': False, 'trim_rule': 'None', 'datetime': '2026-11-05T15:37:59.126788', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'build_vocab'}
+INFO gensim.utils: Word2Vec lifecycle event {'msg': 'training model with 1 workers on 2000 vocabulary and 64 features, using sg=1 hs=0 sample=0.001 negative=5 window=5 shrink_windows=True', 'datetime': '2026-11-05T15:37:59.126887', 'gensim': '4.4.0', 'python': '3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]', 'platform': 'Linux-6.18.44-fc-v236-x86_64-with-glibc2.39', 'event': 'train'}
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 51.25% examples, 401453 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 0 - PROGRESS: at 100.00% examples, 391473 words/s, in_qsize 0, out_qsize 1
+INFO gensim.models.word2vec: EPOCH 0: training on 800000 raw words (792722 effective words) took 2.0s, 391431 effective words/s
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 48.75% examples, 383536 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1 - PROGRESS: at 98.75% examples, 384830 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 1: training on 800000 raw words (792789 effective words) took 2.1s, 385022 effective words/s
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 46.25% examples, 360135 words/s, in_qsize 1, out_qsize 0
+INFO gensim.models.word2vec: EPOCH 2 - PROGRESS: at 93.75% examples, 368004 words/s, in_qsize 1, out_qsize 0

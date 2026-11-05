@@ -1,0 +1,11 @@
+primary_fairness_metric: dEOpp_gender
+secondary_fairness_metrics: [dDP_gender, dEOdds_gender, R_sel_gender, dEOpp_inter, dDP_inter, dEOpp_region, dDP_region]
+primary_utility_metric: macro_f1
+acceptable_utility_loss: 0.02        # absolute macro-F1 on validation
+small_group_threshold: 30
+decision_threshold:
+  selection: validation_max_macro_f1
+  grid_quantiles: 41
+group_threshold_mitigation:
+  attribute: gender
+  objective: min validation dEOpp s.t. validation macro_f1 >= base - acceptable_utility_loss

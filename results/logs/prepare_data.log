@@ -1,0 +1,2 @@
+{"time":"2026-11-05 15:25:53,908","level":"INFO","logger":"prepare_data","msg":'labelled LCC: 7659 nodes, 20550 edges'}
+{"time":"2026-11-05 15:25:53,983","level":"INFO","logger":"prepare_data","msg":'saved /home/claude/AFGML_Problem4/data/processed/pokec_z_core.npz (2000 nodes, 5351 edges)'}

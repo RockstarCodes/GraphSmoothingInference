@@ -1,0 +1,27 @@
+# Pokec-z from the official FairGNN repository (Dai & Wang, WSDM 2021).
+dataset:
+  name: Pokec-z
+  source: FairGNN (https://github.com/EnyanDai/FairGNN, dataset/pokec/)
+  base_url: https://raw.githubusercontent.com/EnyanDai/FairGNN/main/dataset/pokec
+  node_file: region_job.csv
+  edge_file: region_job_relationship.txt
+  files:
+    region_job.csv: {sha256: 62f299e688cc07c29fa36f0d4c0f1c15137bd0fdced5931eec15e724e4bda3cd}
+    region_job_relationship.txt: {sha256: a34945943c13a8790439c2230bfb00e6573bb82fe781ccc30a295276b825acf8}
+  raw_dir: data/raw
+  processed_path: data/processed/pokec_z_core.npz
+  provenance_path: data/raw/PROVENANCE.json
+target:
+  column: I_am_working_in_field      # FairGNN predict_attr
+  rule: "raw -1 -> unlabelled; raw 0 -> Y=0; raw >= 1 -> Y=1 (train_fairGNN.py: labels[labels>1]=1)"
+protected:
+  primary: gender
+  secondary: region
+subgraph:
+  procedure: bfs_from_random_root_in_labelled_lcc
+  target_size: 2000
+  sampling_seed: 20261105          # fixed once, before any modelling; never re-drawn
+split:
+  fractions: [0.5, 0.25, 0.25]     # FairGNN 50/25/25 of labelled nodes
+  stratify_by: [y, gender]
+  protocol: transductive

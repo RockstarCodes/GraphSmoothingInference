@@ -1,0 +1,5 @@
+artifact,command,config,seed,data_version,git_commit,status,runtime_s,warnings,timestamp
+data/raw/PROVENANCE.json,python scripts/acquire_data.py --config configs/data.yaml,configs/data.yaml,,raw,unknown,ok,0.1,,2026-11-05T15:25:53
+data/processed/pokec_z_core.npz,python scripts/prepare_data.py --config configs/data.yaml,configs/data.yaml,20261105,80673bb7a5bd18a4,unknown,ok,0.6,,2026-11-05T15:25:53
+results/metrics/subgraph_selection.json,python scripts/prepare_data.py --config configs/data.yaml,configs/data.yaml,20261105,80673bb7a5bd18a4,unknown,ok,,,2026-11-05T15:25:53
+results/metrics/inference_verification.csv,python scripts/verify_inference.py --config configs/model.yaml,configs/model.yaml,0,80673bb7a5bd18a4,unknown,ok,1.7,,2026-11-05T15:35:00

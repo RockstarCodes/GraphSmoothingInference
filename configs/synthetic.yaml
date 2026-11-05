@@ -1,0 +1,26 @@
+# Synthetic attributed graphs (SIMULATED; never mixed with Pokec-z findings)
+base:
+  n_nodes: 2000
+  group_share: 0.5                # share of group 1
+  prevalence: [0.40, 0.60]        # P(Y=1 | A=0), P(Y=1 | A=1)  (base-rate gap)
+  mean_degree: 6
+  group_homophily: 0.5            # P(edge endpoints share A) target; 0.5 ~ no demographic homophily
+  label_homophily: 0.7            # P(edge endpoints share Y) target
+  degree_ratio: 1.0               # mean degree of group 1 / mean degree of group 0
+  edge_corruption: 0.0
+  train_fraction: 0.5
+  unary_strength: 1.0             # signal of the 'fair' unary score: logit p = s*(2Y-1) + noise
+  unary_noise: 1.0
+grid:
+  group_homophily: [0.5, 0.6, 0.7, 0.8, 0.9]
+  degree_ratio: [1.0, 2.0, 4.0]
+  label_homophily: [0.55, 0.7, 0.85]
+  train_fraction: [0.1, 0.25, 0.5]
+realizations: 10
+lambda: 1.0
+eta_grid: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+embedding_check:                  # smaller Node2Vec/FairWalk check on synthetic graphs
+  group_homophily: [0.5, 0.9]
+  realizations: 3
+  n_nodes: 1000
+output_dir: results/metrics/synthetic

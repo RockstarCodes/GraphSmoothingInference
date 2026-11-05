@@ -1,0 +1,18 @@
+# Node2Vec / FairWalk settings (fixed before any test evaluation)
+embedding:
+  dimensions: 64
+  walk_length: 40
+  walks_per_node: 10
+  p: 1.0
+  q: 0.5
+  window: 5
+  negative: 5
+  epochs: 5
+  fairwalk_attribute: gender
+classifier:
+  type: logistic_regression_l2
+  C_grid: [0.01, 0.1, 1.0, 10.0]
+  selection: validation_log_loss
+  standardize: true
+sgc:
+  hops: 2          # simple graph convolution (Wu et al., 2019): LR on S^K X, S = D^-1/2 (A+I) D^-1/2
